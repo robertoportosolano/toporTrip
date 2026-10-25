@@ -424,6 +424,40 @@ html{scroll-padding-top:110px}
 .xtips{margin:14px 0 0;padding:10px 12px;border-radius:12px;background:var(--accent-soft);font-size:.86rem}
 .dayx{margin-top:12px}
 
+.th{position:relative;display:grid;place-items:center;overflow:hidden;background:var(--surface-2);border-radius:12px}
+.th>i{font-style:normal}
+.th a{position:absolute;inset:0;display:block}
+.th img{width:100%;height:100%;object-fit:cover;display:block;animation:fadein .4s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.th img{animation:none}}
+.xl li{grid-template-columns:76px 1fr;gap:12px}
+.xl .e.th{width:76px;height:76px;font-size:1.6rem}
+.banner{height:130px;margin:-18px -18px 14px;border-radius:14px 14px 0 0;font-family:'Noto Serif SC',serif;font-size:3rem;color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--surface))}
+.banner.has::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.25),transparent 60%);pointer-events:none}
+.city::after{z-index:1}
+.tl-img{margin-top:8px;width:100%;max-width:340px;height:150px;font-size:1.6rem}
+.tl-img:not(.has){display:none}
+.credit{margin:8px 0 0;font-size:.75rem;color:var(--muted)}
+
+.cgal-wrap{margin-top:28px}
+.cgal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cgal .stop2{grid-column:span 2}
+@media (max-width:900px){.cgal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.cgal>*{flex:0 0 78%;scroll-snap-align:start}}
+.cg{position:relative;height:220px;border-radius:18px;overflow:hidden;border:0;padding:0;cursor:pointer;text-align:left;font:inherit;color:#fff;background:color-mix(in srgb,var(--c) 22%,var(--surface))}
+.cg.small{height:150px}
+.cg .th{position:absolute;inset:0;border-radius:0;font-family:'Noto Serif SC',serif;font-size:4rem;color:var(--c)}
+.cg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,18,36,.82),rgba(10,18,36,.1) 55%,transparent);pointer-events:none}
+.cg .cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;pointer-events:none}
+.cg .cap .h{font-family:'Noto Serif SC',serif;font-size:1.6rem;line-height:1}
+.cg .cap b{display:block;font-size:1.05rem;margin-top:2px}
+.cg .cap small{opacity:.9;font-size:.8rem}
+.cg .th a{pointer-events:none}
+.cg .th>i{position:absolute;top:12px;right:16px;font-size:3.2rem;opacity:.35;line-height:1}
+.cg.small .th>i{font-size:2.4rem}
+.xhero{height:200px;margin:-20px -20px 16px;border-radius:14px 14px 0 0;font-family:'Noto Serif SC',serif;font-size:4rem;color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--surface))}
+.dhero{height:150px;margin:-20px -20px 14px;border-radius:14px 14px 0 0;font-family:'Noto Serif SC',serif;font-size:3.4rem;color:var(--c);background:color-mix(in srgb,var(--c) 10%,var(--surface))}
+@media (max-width:520px){.xhero{height:160px}.dhero{height:120px}}
+
 footer{margin:48px 0 32px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:16px}
 footer ul{padding-left:18px;margin:6px 0}
 </style>
@@ -467,6 +501,10 @@ footer ul{padding-left:18px;margin:6px 0}
     <div class="card kpi"><b>0–23 °C</b><span>de Beijing a Shenzhen</span></div>
     <div class="card kpi"><b>20 + 12 kg</b><span>maleta y equipaje de mano</span></div>
   </div>
+  <section class="cgal-wrap" aria-labelledby="cgal-t">
+    <h2 id="cgal-t">Las ciudades del viaje</h2>
+    <div class="cgal" id="cgal"></div>
+  </section>
 </div>
 
 
@@ -595,12 +633,39 @@ footer ul{padding-left:18px;margin:6px 0}
     <li>Tiempos de aeropuerto: <a href="https://www.klm.com/information/airport/boarding-times" target="_blank" rel="noopener">KLM, horarios de embarque</a>, Air France (cierre de check-in en CDG), China Eastern (cierre de mostrador y puerta) y Gobierno de Shanghái (cierre de check-in en Pudong).</li>
     <li>Sitios del grupo: <a href="https://ljaver.github.io/mision-china-2026/" target="_blank" rel="noopener">ljaver.github.io/mision-china-2026</a> y <a href="https://leovassallo07.github.io/china-trip-2026/" target="_blank" rel="noopener">leovassallo07.github.io/china-trip-2026</a>.</li>
     <li>Check-in: <a href="https://www.klm.com/information/airport/check-in-times" target="_blank" rel="noopener">KLM, horarios de check-in</a> y <a href="https://www.latamairlines.com/co/es/centro-ayuda/preguntas/check-in/automatico/disponible-pasajeros" target="_blank" rel="noopener">LATAM, check-in automático</a>. Configuración de Alipay: <a href="https://www.wanderinchina.com/es/survival-guide/payment/alipay/" target="_blank" rel="noopener">Wander in China</a>.</li>
+    <li>Fotos de referencia: Wikimedia Commons, tomadas del sitio de leovassallo07 (Ciudad Prohibida: Gary Todd, CC0; Gran Muralla: CTLiotta, CC0; Templo del Cielo: Hermann Luyken, CC0; Pudong desde el Bund: Mattias Hill, CC BY-SA 4.0; Jardín Yuyuan: Nikolamikovic82, CC0; Shenzhen: Huangdan2060, CC0). Las demás enlazan a su página con autor y licencia. Algunas fotos adicionales se cargan desde Wikipedia.</li>
     <li>Pronóstico en vivo: Open-Meteo. Tasas de cambio: ExchangeRate-API.</li>
   </ul>
   Horarios sujetos a cambios por circunstancias ajenas a asiaBconsulting.
 </footer>
 
 <script>
+/* ---------- Imágenes de referencia (Wikipedia, se cargan en el navegador) ---------- */
+const IMGCACHE={};try{Object.assign(IMGCACHE,JSON.parse(localStorage.getItem('china26-img2')||'{}'))}catch(e){}
+function wikiImg(q){
+  if(IMGCACHE[q]!==undefined)return Promise.resolve(IMGCACHE[q]);
+  const u='https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrlimit=1&prop=pageimages|info&inprop=url&piprop=thumbnail&pithumbsize=640&gsrsearch='+encodeURIComponent(q);
+  return fetch(u).then(r=>r.ok?r.json():null).then(d=>{const p=d&&d.query&&Object.values(d.query.pages)[0];
+    const v=p&&p.thumbnail?{src:p.thumbnail.source,url:p.fullurl,t:p.title}:null;if(!v)return null;IMGCACHE[q]=v;
+    try{localStorage.setItem('china26-img2',JSON.stringify(IMGCACHE))}catch(e){}return v}).catch(()=>null);
+}
+const LOCALIMG={"forbidden": {"t": "Ciudad Prohibida vista desde Jingshan", "by": "Gary Todd · CC0", "src": "https://commons.wikimedia.org/wiki/File:Beijing_Forbidden_City_Viewed_from_Jingshan_Park_(10553754905).jpg"}, "wall": {"t": "Gran Muralla en Mutianyu", "by": "CTLiotta · CC0", "src": "https://commons.wikimedia.org/wiki/File:Great_Wall_of_China_at_Mutianyu.JPG"}, "temple": {"t": "Templo del Cielo", "by": "Hermann Luyken · CC0", "src": "https://commons.wikimedia.org/wiki/File:2014.09.29.165903_Temple_of_Heaven_Bejing.jpg"}, "bund": {"t": "Pudong de noche desde el Bund", "by": "Mattias Hill · CC BY-SA 4.0", "src": "https://commons.wikimedia.org/wiki/File:The_Bund_Shanghai.jpg"}, "yu": {"t": "Jardín Yuyuan, Shanghái", "by": "Nikolamikovic82 · CC0", "src": "https://commons.wikimedia.org/wiki/File:Shanghai,_Yu_Garden.jpg"}, "shenzhen": {"t": "Shenzhen desde el embalse de Meilin", "by": "Huangdan2060 · CC0", "src": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_from_Meilin_Reservoir_Dam6.jpg"}, "pek2": {"t": "Aeropuerto Capital de Beijing, Terminal 2", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Beijing_Capital_International_Airport_Terminal_2_view.jpg"}, "uibe": {"t": "Campus de UIBE", "by": "", "src": "https://commons.wikimedia.org/wiki/File:UIBE_Campus.jpg"}, "lenovo": {"t": "Sede de Lenovo en Beijing", "by": "", "src": "https://commons.wikimedia.org/wiki/File:LenovoHeadquartersBeijing.jpg"}, "embassy": {"t": "Embajada de Colombia en Beijing", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Colombian_Embassy_Beijing_9060.JPG"}, "cufe": {"t": "Central University of Finance and Economics", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Central_University_of_Finance_and_Economics,_Xueyuannanlu_campus_(20260813150023).jpg"}, "iflytek": {"t": "Edificio de iFLYTEK en ZPark", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Beijing_iFLYTEK_Building_at_ZPark_Phase_I_(20240807160653).jpg"}, "tiananmen": {"t": "Plaza de Tiananmén", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Tiananmen_Square.pic.jpg"}, "mutianyu2": {"t": "Gran Muralla, Mutianyu", "by": "", "src": "https://commons.wikimedia.org/wiki/File:67054-The-Great-Wall,_Mutianyu.jpg"}, "wangfujing": {"t": "Calle Wangfujing", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Wangfujing_street,_Beijing.JPG"}, "beijing_south": {"t": "Estación Beijing Sur", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Beijing_South_Railway_Station_20220831.jpg"}, "pvg": {"t": "Aeropuerto de Pudong, Terminal 1", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Terminal_1_Departures,_Shanghai_Pudong_International_Airport.jpg"}, "byd": {"t": "Sede de BYD en Shenzhen", "by": "", "src": "https://commons.wikimedia.org/wiki/File:BYD_Company_Limited_headquarters_01.png"}, "szu": {"t": "Universidad de Shenzhen, campus Yuehai", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Central_Plaza_of_Yuehai_Campus,_Shenzhen_University.jpg"}, "huaqiangbei": {"t": "Calle peatonal de Huaqiangbei", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Huaqiangbei_walking_street.jpg"}, "civic": {"t": "Centro Cívico de Shenzhen", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Shenzhen_Civic_Center.jpg"}, "talent": {"t": "Shenzhen Talent Park", "by": "", "src": "https://commons.wikimedia.org/wiki/File:%E6%B7%B1%E5%9C%B3%E4%BA%BA%E6%89%8D%E5%85%AC%E5%9C%92%E8%88%87%E8%8F%AF%E6%BD%A4%E5%A4%A7%E5%BB%88%E8%88%87%E6%B7%B1%E5%9C%B3%E7%81%A31%E8%99%9F.jpg"}, "shenzhenbay": {"t": "Parque de la Bahía de Shenzhen", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Shenzhen_Bay_Park.jpg"}, "szx": {"t": "Aeropuerto de Shenzhen Bao’an", "by": "", "src": "https://commons.wikimedia.org/wiki/File:Shenzhen_BaoAn_International_Airport.JPG"}, "shenzhen_north": {"t": "Estación Shenzhen Norte", "by": "", "src": "https://commons.wikimedia.org/wiki/File:SHENZHEN_NORTH_RAILWAY_STATION.jpg"}};
+function putImg(el,src,href,title){const im=new Image();im.alt=title;im.decoding='async';
+  im.onload=()=>{const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener';a.title=title;a.append(im);el.append(a);el.classList.add('has')};im.src=src}
+function hydrate(root){
+  root.querySelectorAll('.th[data-img]:not([data-done])').forEach(el=>{el.dataset.done='1';const L=LOCALIMG[el.dataset.img];
+    if(L)putImg(el,'images/'+el.dataset.img+'.jpg',L.src,L.t+(L.by?' · '+L.by:'')+' · Wikimedia Commons');});
+  root.querySelectorAll('.th[data-q]:not([data-img]):not([data-done])').forEach(el=>{el.dataset.done='1';
+    wikiImg(el.dataset.q).then(v=>{if(!v)return;const im=new Image();im.alt=v.t;im.decoding='async';
+      im.onload=()=>{const a=document.createElement('a');a.href=v.url;a.target='_blank';a.rel='noopener';a.title='Imagen de referencia: '+v.t+' (Wikipedia)';a.append(im);el.append(a);el.classList.add('has')};
+      im.src=v.src;});});
+}
+const IMGMAP=[[/Ciudad Prohibida/,'forbidden'],[/Mutianyu/,'mutianyu2'],[/Recorrido cultural por Shanghái/,'bund'],[/Huaqiangbei/,'huaqiangbei'],[/ciudad del futuro/,'civic'],
+ [/Central University of Finance/,'cufe'],[/Visita universitaria/,'szu'],[/Embajador/,'embassy'],[/^Beijing → Shanghái$/,'beijing_south'],[/Lenovo/,'lenovo'],[/iFLYTEK/,'iflytek'],[/BYD/,'byd'],
+ [/aeropuerto Capital/,'pek2'],[/Llegada al Pullman/,'shenzhen_north']];
+function imgFor(it){const m=IMGMAP.find(([re])=>re.test(it.title));return m?m[1]:''}
+
+
 const CITIES={
   bj:{name:'Beijing',han:'北京',dates:'4–9 nov',nights:'5',min:0,max:12,climate:'Frío y seco',hotel:'Hilton Beijing',lat:39.9042,lon:116.4074,
     wear:'Abrigo grueso, 2–3 suéteres, camisetas térmicas de base, pantalón largo y bufanda. Mañanas y noches cerca de 0 °C; en la Gran Muralla sopla viento.',
@@ -1050,9 +1115,12 @@ document.addEventListener('keydown',e=>{const n=e.target.closest&&e.target.close
 
 /* ---------- Cities ---------- */
 const SCALE=25,pct=v=>v/SCALE*100;
+const CITYLOC={bj:'forbidden',sh:'bund',sz:'shenzhen'};
+const CITYIMG={bj:'Beijing central business district skyline',sh:'Lujiazui',hz:'West Lake Hangzhou',sz:'Futian District Shenzhen',par:'Eiffel Tower',ams:'Canals of Amsterdam'};
 function renderCities(){
 $('#cities').innerHTML=Object.entries(CITIES).map(([k,c])=>`
 <article class="card city c-${k}" data-han="${c.han}">
+  <div class="banner th" data-q="${CITYIMG[k]}"${CITYLOC[k]?` data-img="${CITYLOC[k]}"`:''}><i aria-hidden="true">${c.han}</i></div>
   <div class="city-head"><h3><span class="wx" aria-hidden="true">${WXI[k]}</span>${c.name}<small>${c.han}</small></h3><span class="tag">${c.climate}</span></div>
   <div class="meta-row"><span class="tag">📅 ${c.dates}</span><span class="tag">🌙 ${c.nights} ${c.nights==='1'?'noche':(/^\d+$/.test(c.nights)?'noches':'')}</span><span class="tag">🏨 ${c.hotel}</span></div>
   <div class="temp"><span class="temp-val">${c.min}–${c.max} °C ${c.note?`<small>(${c.note})</small>`:''}</span>
@@ -1062,6 +1130,7 @@ $('#cities').innerHTML=Object.entries(CITIES).map(([k,c])=>`
   <ul class="places">${c.places.map(p=>`<li>${p}</li>`).join('')}</ul>
   ${c.also?`<p class="also"><b>Si hay tiempo libre:</b> ${c.also}</p>`:''}
 </article>`).join('');
+hydrate($('#cities'));
 }
 renderCities();
 
@@ -1075,6 +1144,7 @@ function forecast(k){
 }
 const WCODE={0:'Despejado',1:'Mayormente despejado',2:'Parcialmente nublado',3:'Nublado',45:'Niebla',48:'Niebla',51:'Llovizna ligera',53:'Llovizna',55:'Llovizna intensa',61:'Lluvia ligera',63:'Lluvia',65:'Lluvia fuerte',71:'Nieve ligera',73:'Nieve',75:'Nieve intensa',80:'Chubascos ligeros',81:'Chubascos',82:'Chubascos fuertes',95:'Tormenta'};
 
+
 /* ---------- Visitas y comida sugeridas ---------- */
 const MAPQ=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
 const EXPLORE={
@@ -1085,10 +1155,10 @@ const EXPLORE={
        ['🛍️','Wangfujing','王府井','Calle peatonal comercial en el centro, a unos 20 minutos en taxi del Hilton. Buena para las compras del domingo.','Wangfujing Street Beijing'],
        ['🎨','Distrito de arte 798','798艺术区','Fábricas convertidas en galerías y cafés.','798 Art District Beijing'],
        ['🌉','Palacio de Verano','颐和园','Jardines imperiales junto al lago Kunming. Pide media jornada.','Summer Palace Beijing']],
-  eat:[['🦆','Pato laqueado','北京烤鸭','El plato de Beijing: piel crujiente en crepas finas con salsa dulce y cebollín.'],
-       ['🥟','Jiaozi','饺子','Empanaditas cocidas al vapor o hervidas, rellenas de cerdo y verduras.'],
-       ['🍜','Zhajiangmian','炸酱面','Fideos gruesos con salsa de soya fermentada y cerdo.'],
-       ['🍢','Tanghulu','糖葫芦','Frutas cubiertas de caramelo en palito; el dulce callejero típico del invierno.']],
+  eat:[['🦆','Pato laqueado','北京烤鸭','El plato de Beijing: piel crujiente en crepas finas con salsa dulce y cebollín.','Peking duck'],
+       ['🥟','Jiaozi','饺子','Empanaditas cocidas al vapor o hervidas, rellenas de cerdo y verduras.','Jiaozi dumpling'],
+       ['🍜','Zhajiangmian','炸酱面','Fideos gruesos con salsa de soya fermentada y cerdo.','Zhajiangmian'],
+       ['🍢','Tanghulu','糖葫芦','Frutas cubiertas de caramelo en palito; el dulce callejero típico del invierno.','Tanghulu']],
   tip:'Hace frío de noche: lleva guantes si sales después de las 18:00.'},
  sh:{name:'Shanghái',han:'上海',c:'sh',
   free:'Lun 9 desde las 17:30 · mar 10 desde las 19:00 · mié 11 desde las 18:00.',
@@ -1097,19 +1167,19 @@ const EXPLORE={
        ['🍸','Xintiandi','新天地','Casas shikumen restauradas con restaurantes; cómodo para cenar en grupo.','Xintiandi Shanghai'],
        ['🌳','Antigua Concesión Francesa','法租界','Calles arboladas como Wukang Road, ideales para caminar.','Wukang Road Shanghai'],
        ['🛳️','Crucero por el río Huangpu','黄浦江','Paseo nocturno de unos 50 minutos entre el Bund y Pudong.','Huangpu River cruise Shanghai']],
-  eat:[['🥟','Xiaolongbao','小笼包','Bollitos al vapor con caldo dentro: muerde un poco y sorbe el caldo antes de comer.'],
-       ['🍳','Shengjianbao','生煎包','Bollos de cerdo dorados a la sartén, crujientes por debajo.'],
-       ['🍖','Hongshao rou','红烧肉','Cerdo estofado en salsa de soya y azúcar, dulce y suave.'],
-       ['🦀','Cangrejo peludo','大闸蟹','Noviembre es su temporada en Shanghái; es una delicia local, aunque costosa.']],
+  eat:[['🥟','Xiaolongbao','小笼包','Bollitos al vapor con caldo dentro: muerde un poco y sorbe el caldo antes de comer.','Xiaolongbao'],
+       ['🍳','Shengjianbao','生煎包','Bollos de cerdo dorados a la sartén, crujientes por debajo.','Shengjian mantou'],
+       ['🍖','Hongshao rou','红烧肉','Cerdo estofado en salsa de soya y azúcar, dulce y suave.','Red braised pork belly'],
+       ['🦀','Cangrejo peludo','大闸蟹','Noviembre es su temporada en Shanghái; es una delicia local, aunque costosa.','Chinese mitten crab']],
   tip:'Nanjing Road es peatonal y llena de gente de noche: cuida el celular y la billetera.'},
  hz:{name:'Hangzhou',han:'杭州',c:'hz',
   free:'El día es de visitas con el grupo; casi no hay tiempo libre.',
   see:[['🌊','Lago del Oeste','西湖','Patrimonio UNESCO y símbolo de la ciudad. Si el bus pasa cerca, pide al coordinador una parada breve.','West Lake Hangzhou'],
        ['🍵','Plantaciones de té Longjing','龙井村','Colinas de té verde al suroeste del lago.','Longjing Village Hangzhou']],
-  eat:[['🍖','Cerdo Dongpo','东坡肉','Panceta cocida lentamente en vino de arroz; el plato más famoso de Hangzhou.'],
-       ['🐟','Pescado al vinagre del Lago del Oeste','西湖醋鱼','Pescado con salsa agridulce de vinagre.'],
-       ['🦐','Camarones con té Longjing','龙井虾仁','Camarones salteados con hojas de té verde.'],
-       ['🍵','Té Longjing','龙井茶','El té verde más famoso de China; buen recuerdo para llevar.']],
+  eat:[['🍖','Cerdo Dongpo','东坡肉','Panceta cocida lentamente en vino de arroz; el plato más famoso de Hangzhou.','Dongpo pork'],
+       ['🐟','Pescado al vinagre del Lago del Oeste','西湖醋鱼','Pescado con salsa agridulce de vinagre.','West Lake fish in vinegar gravy'],
+       ['🦐','Camarones con té Longjing','龙井虾仁','Camarones salteados con hojas de té verde.','Longjing prawns'],
+       ['🍵','Té Longjing','龙井茶','El té verde más famoso de China; buen recuerdo para llevar.','Longjing tea']],
   tip:'Si quieres comprar té Longjing, pregunta al coordinador por una tienda confiable.'},
  sz:{name:'Shenzhen',han:'深圳',c:'sz',
   free:'Jue 12 desde las 18:30 · vie 13 de 14:00 a 17:30 (por confirmar) · sáb 14 desde las 14:30 · dom 15 hasta las 15:00.',
@@ -1118,23 +1188,23 @@ const EXPLORE={
        ['🖼️','Aldea de pintores Dafen','大芬油画村','Miles de talleres de pintura al óleo; buen lugar para comprar recuerdos.','Dafen Oil Painting Village'],
        ['🌅','Parque de la Bahía de Shenzhen','深圳湾公园','Malecón para caminar al atardecer, con vista hacia Hong Kong.','Shenzhen Bay Park'],
        ['⚓','Sea World, Shekou','蛇口海上世界','Zona de restaurantes y bares junto a un antiguo barco crucero.','Sea World Shekou Shenzhen']],
-  eat:[['🥢','Dim sum (yum cha)','早茶','Desayuno-almuerzo cantonés de bocados al vapor con té. Ideal el sábado.'],
-       ['🍗','Ganso asado','烧鹅','Asado cantonés de piel brillante y crujiente.'],
-       ['🍲','Hot pot de res Chaoshan','潮汕牛肉火锅','Caldo claro donde cocinas cortes de res muy frescos.'],
-       ['🥭','Postres de mango','杨枝甘露','Crema fría de mango, pomelo y sagú; perfecta para el calor.']],
+  eat:[['🥢','Dim sum (yum cha)','早茶','Desayuno-almuerzo cantonés de bocados al vapor con té. Ideal el sábado.','Dim sum'],
+       ['🍗','Ganso asado','烧鹅','Asado cantonés de piel brillante y crujiente.','Roast goose'],
+       ['🍲','Hot pot de res Chaoshan','潮汕牛肉火锅','Caldo claro donde cocinas cortes de res muy frescos.','Chaoshan beef hotpot'],
+       ['🥭','Postres de mango','杨枝甘露','Crema fría de mango, pomelo y sagú; perfecta para el calor.','Mango pomelo sago']],
   tip:'Huaqiangbei está en la agenda; los productos sin marca no tienen garantía.'},
  par:{name:'París · escala',han:'🇫🇷',c:'tr',
   free:'Mar 3 de 13:40 a 23:20 (9 h 40 min). Hay que volver a la Terminal 2E a más tardar a las 20:20.',
   see:[['🚆','Tren RER B al centro','','Conecta el aeropuerto con el centro en unos 35–50 minutos. Calcula el regreso con margen.','RER B Charles de Gaulle'],
        ['🗼','Torre Eiffel y Trocadéro','','La mejor vista de la torre es desde la explanada del Trocadéro.','Trocadéro Paris'],
        ['⛪','Notre-Dame y la Île de la Cité','','Paseo a pie por el corazón histórico junto al Sena.','Notre-Dame de Paris']],
-  eat:[['🥐','Croissant y café en un bistró',''],['🥪','Croque-monsieur','','Sándwich gratinado de jamón y queso.'],['🍫','Macarons','','Para llevar de recuerdo.']],
+  eat:[['🥐','Croissant y café en un bistró','','','Croissant'],['🥪','Croque-monsieur','','Sándwich gratinado de jamón y queso.','Croque monsieur'],['🍫','Macarons','','Para llevar de recuerdo.','Macaron']],
   tip:'Salir del aeropuerto es opcional. Si estás cansado, la Terminal 2E tiene zonas de descanso.'},
  ams:{name:'Ámsterdam · noche',han:'🇳🇱',c:'tr',
   free:'Lun 16 desde las 18:25 hasta el vuelo del mar 17 a las 09:20. El hotel está por confirmar.',
   see:[['🚆','Tren a Ámsterdam Centraal','','Unos 15–20 minutos desde Schiphol.','Amsterdam Centraal'],
        ['🛶','Canales y plaza Dam','','Paseo nocturno por el centro histórico.','Dam Square Amsterdam']],
-  eat:[['🧇','Stroopwafel','','Galleta de caramelo; la mejor, recién hecha.'],['🧆','Bitterballen','','Croquetas fritas de carne, típicas de bar.'],['🐟','Arenque crudo (haring)','','Un clásico holandés para valientes.']],
+  eat:[['🧇','Stroopwafel','','Galleta de caramelo; la mejor, recién hecha.','Stroopwafel'],['🧆','Bitterballen','','Croquetas fritas de carne, típicas de bar.','Bitterballen'],['🐟','Arenque crudo (haring)','','Un clásico holandés para valientes.','Soused herring']],
   tip:'El vuelo a Bogotá sale temprano: en Schiphol a las 06:20.'}
 };
 const XORDER=['bj','sh','hz','sz','par','ams'];
@@ -1142,12 +1212,14 @@ let xcur='bj';
 function renderX(){
   $('#xtabs').innerHTML=XORDER.map(k=>{const x=EXPLORE[k];return `<button type="button" role="tab" data-x="${k}" aria-selected="${k===xcur}" style="--c:var(--${x.c})"><span class="h">${x.han}</span>${x.name}</button>`}).join('');
   const x=EXPLORE[xcur],v=$('#xview');v.style.setProperty('--c',`var(--${x.c})`);
-  const li=(e,n,zh,d,q)=>`<li><span class="e" aria-hidden="true">${e}</span><div><b>${n}</b>${zh?`<span class="zh">${zh}</span>`:''}${d?`<p>${d}</p>`:''}${q?`<a href="${MAPQ(q)}" target="_blank" rel="noopener">Ver en el mapa</a>`:''}</div></li>`;
-  v.innerHTML=`<h3 style="margin:0;font-family:'Noto Serif SC',serif;font-size:1.4rem">${x.name}</h3>
+  const XLOC={'Templo del Cielo':'temple','Wangfujing':'wangfujing','The Bund de noche':'bund','Jardín Yuyuan y su bazar':'yu','Parque de la Bahía de Shenzhen':'shenzhenbay'};
+  const li=(e,n,zh,d,q,iq)=>`<li><span class="e th" data-q="${iq||q||n}"${XLOC[n]?` data-img="${XLOC[n]}"`:''}><i aria-hidden="true">${e}</i></span><div><b>${n}</b>${zh?`<span class="zh">${zh}</span>`:''}${d?`<p>${d}</p>`:''}${q?`<a href="${MAPQ(q)}" target="_blank" rel="noopener">Ver en el mapa</a>`:''}</div></li>`;
+  v.innerHTML=`<div class="th xhero" data-q="${CITYIMG[xcur]}"${CITYLOC[xcur]?` data-img="${CITYLOC[xcur]}"`:''}><i aria-hidden="true">${x.han}</i></div><h3 style="margin:0;font-family:'Noto Serif SC',serif;font-size:1.4rem">${x.name}</h3>
   <div class="free"><b>Tiempo libre según la agenda:</b> ${x.free}</div>
   <div class="xcols"><div><h3>📍 Para visitar</h3><ul class="xl">${x.see.map(a=>li(...a)).join('')}</ul></div>
-  <div><h3>🍽️ Para comer</h3><ul class="xl">${x.eat.map(a=>li(a[0],a[1],a[2],a[3])).join('')}</ul></div></div>
-  <p class="xtips">💡 ${x.tip}</p>`;
+  <div><h3>🍽️ Para comer</h3><ul class="xl">${x.eat.map(a=>li(a[0],a[1],a[2],a[3],'',a[4])).join('')}</ul></div></div>
+  <p class="xtips">💡 ${x.tip}</p><p class="credit">Fotos de referencia de Wikimedia Commons y Wikipedia. Toca una foto para ver su fuente, autor y licencia.</p>`;
+  hydrate(v);
 }
 renderX();
 document.addEventListener('click',e=>{const t=e.target.closest('[data-x]');if(t){xcur=t.dataset.x;renderX();if(t.dataset.go){$('#explorar').scrollIntoView({behavior:'smooth'})}}});
@@ -1180,6 +1252,15 @@ const DEST=[
  [UT('2026-11-17','18:25',-5),'Barranquilla','America/Bogota',false]];
 function destNow(ms){let r=null;for(const d of DEST)if(ms>=d[0])r=d;return r&&{city:r[1],tz:r[2],here:r[3]}}
 
+
+/* ---------- Galería de ciudades ---------- */
+(()=>{const G=[['bj','4–9 nov · 5 noches'],['sh','9–12 nov · 3 noches'],['hz','10 nov · excursión'],['sz','12–15 nov · 3 noches'],['par','3 nov · escala de 9 h 40'],['ams','16 nov · una noche']];
+ $('#cgal').innerHTML=G.map(([k,t],i)=>{const x=EXPLORE[k],small=i>3;
+   return `<button type="button" class="cg${small?' small stop2':''}" style="--c:var(--${x.c})" data-x="${k}" data-go="1" aria-label="${x.name}: qué visitar y qué comer">
+   <span class="th" data-q="${CITYIMG[k]}"${CITYLOC[k]?` data-img="${CITYLOC[k]}"`:''}><i aria-hidden="true">${x.han}</i></span>
+   <span class="cap">${/^[一-鿿]/.test(x.han)?`<span class="h">${x.han}</span>`:''}<b>${x.name}</b><small>${t}${CITIES[k]?` · ${CITIES[k].min}–${CITIES[k].max} °C`:''}</small></span></button>`}).join('');
+ hydrate($('#cgal'));})();
+
 /* ---------- Agenda ---------- */
 const bogDate=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Bogota'}).format(new Date());
 /* Fecha local: la de la ciudad donde estás (Colombia, Europa o China) */
@@ -1202,7 +1283,8 @@ function renderDay(){
   const temp=city?`${city.min}–${city.max} °C · ${city.climate.toLowerCase()}${d.wxNote?` (${d.wxNote})`:''}`:(d.wx||'');
   const [bc,bl]=DRESS[d.dress[0]];
   const v=$('#dayview');v.className='card dayview c-'+d.c;
-  v.innerHTML=`<p class="kicker">Día ${i+1} de ${DAYS.length} · ${label}</p><h3>${d.long}</h3><p class="place">${d.place}</p>
+  const hk=d.id==='03'?'par':d.id==='16'?'ams':(CITIES[d.c]?d.c:'');
+  v.innerHTML=`${hk?`<div class="th dhero" data-q="${CITYIMG[hk]}"${CITYLOC[hk]?` data-img="${CITYLOC[hk]}"`:''}><i aria-hidden="true">${EXPLORE[hk].han}</i></div>`:''}<p class="kicker">Día ${i+1} de ${DAYS.length} · ${label}</p><h3>${d.long}</h3><p class="place">${d.place}</p>
   <div class="facts">
     <div class="fact"><span>Clima de referencia</span>${temp}<div class="live" id="live"></div></div>
     <div class="fact"><span>Transporte</span>${d.transport||'—'}</div>
@@ -1216,7 +1298,7 @@ function renderDay(){
     const cls=MOVE.has(it.k)?'move':(it.k==='free'?'free':'');
     const mode=MODE[it.k]?`<span class="mode">${MODE[it.k]}</span><br>`:'';
     const time=it.t?`${it.t}${it.e?`<small>a ${it.e}</small>`:''}`:(it.e?`<small>hasta ${it.e}</small>`:'<small>·</small>');
-    return `<li class="${cls}"><time>${time}</time><div class="tl-ico" aria-hidden="true">${ICO[it.k]||'•'}</div><div>${mode}<h4>${it.title}</h4>${it.sub?`<p class="s">${it.sub}</p>`:''}${it.meta?`<ul class="pills">${it.meta.map(m=>`<li>${m}</li>`).join('')}</ul>`:''}${it.note?`<p class="n">${it.note}</p>`:''}${it.f?winHTML(it.f):''}</div></li>`;
+    return `<li class="${cls}"><time>${time}</time><div class="tl-ico" aria-hidden="true">${ICO[it.k]||'•'}</div><div>${mode}<h4>${it.title}</h4>${it.sub?`<p class="s">${it.sub}</p>`:''}${it.meta?`<ul class="pills">${it.meta.map(m=>`<li>${m}</li>`).join('')}</ul>`:''}${it.note?`<p class="n">${it.note}</p>`:''}${it.f?winHTML(it.f):''}${imgFor(it)?`<span class="th tl-img" data-img="${imgFor(it)}"><i aria-hidden="true">${ICO[it.k]||''}</i></span>`:''}</div></li>`;
   }).join('')}</ol>
   <div class="pager"><button type="button" data-day="${prev?prev.id:''}" ${prev?'':'disabled'}><small>Día anterior</small>${prev?prev.long.replace(' de noviembre',''):'—'}</button><button type="button" data-day="${next?next.id:''}" ${next?'':'disabled'}><small>Día siguiente</small>${next?next.long.replace(' de noviembre',''):'—'}</button></div>`;
   document.querySelectorAll('.dchip').forEach(b=>b.setAttribute('aria-current',b.dataset.day===cur?'true':'false'));
@@ -1234,6 +1316,7 @@ function renderDay(){
       live.textContent=`Pronóstico: ${mn}–${mx} °C · ${WCODE[dd.weather_code[j]]||'Variable'} · lluvia ${pp}% · viento ${ws} km/h${pp>=40?' → lleva paraguas':''}`;
     });
   }
+  hydrate($('#dayview'));
 }
 function goDay(id,scroll){
   cur=id;renderDay();
