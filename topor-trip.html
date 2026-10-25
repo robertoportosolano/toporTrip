@@ -7,28 +7,28 @@
 <meta name="description" content="Dashboard unificado de la Misión China 2026 (Americana & Litoral con asiaBconsulting): itinerario día a día, transporte, clima, vestuario, hoteles y preparación.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f7f5f1; --surface:#ffffff; --surface-2:#f1ede6; --text:#1d1b19; --muted:#6b655d;
-  --line:#e4ded4; --accent:#b8321f; --accent-soft:#f6e4df; --warn:#9a5b00; --warn-soft:#fbf0dc;
-  --bj:#3a6ea5; --sh:#2f8a80; --hz:#a7801f; --sz:#c45a2c; --tr:#7b746b;
-  --formal:#2f3a5c; --biz:#56693a; --casual:#8a5a2b; --viaje:#6b655d;
-  --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
+  --bg:#f2f5f9; --surface:#ffffff; --surface-2:#e8eef5; --text:#13213b; --muted:#56637a;
+  --line:#d5dee9; --accent:#b8322a; --accent-soft:#f8e4e2; --warn:#8a5a00; --warn-soft:#fbf1dc; --ink:#1f3f8f;
+  --bj:#1f3f8f; --sh:#1b7a6d; --hz:#8a6d12; --sz:#b5541c; --tr:#6b7487;
+  --formal:#13213b; --biz:#1b7a6d; --casual:#8a5a1f; --viaje:#6b7487;
+  --shadow:0 1px 2px rgba(19,33,59,.05),0 8px 24px rgba(19,33,59,.06);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#151413; --surface:#1f1d1b; --surface-2:#292623; --text:#f2eee8; --muted:#a59e94;
-    --line:#35312c; --accent:#e5644d; --accent-soft:#3a2420; --warn:#e8b765; --warn-soft:#3a2f1c;
-    --bj:#7fb0e6; --sh:#6fc4b8; --hz:#e0bb5c; --sz:#ee8a5c; --tr:#a59e94;
-    --formal:#9aa8d6; --biz:#b3c486; --casual:#d9a774; --viaje:#a59e94; --shadow:none;
+    --bg:#0e1628; --surface:#152039; --surface-2:#1d2a47; --text:#e8eef8; --muted:#9aa8c0;
+    --line:#2a3858; --accent:#f07c70; --accent-soft:#3a2230; --warn:#f0c065; --warn-soft:#3a3020; --ink:#93b2ff;
+    --bj:#93b2ff; --sh:#6fd0c0; --hz:#e6c45a; --sz:#f19a5e; --tr:#9aa8c0;
+    --formal:#c9d6f2; --biz:#8fdccf; --casual:#e8b98a; --viaje:#9aa8c0; --shadow:none;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#151413; --surface:#1f1d1b; --surface-2:#292623; --text:#f2eee8; --muted:#a59e94;
-  --line:#35312c; --accent:#e5644d; --accent-soft:#3a2420; --warn:#e8b765; --warn-soft:#3a2f1c;
-  --bj:#7fb0e6; --sh:#6fc4b8; --hz:#e0bb5c; --sz:#ee8a5c; --tr:#a59e94;
-  --formal:#9aa8d6; --biz:#b3c486; --casual:#d9a774; --viaje:#a59e94; --shadow:none;
+  --bg:#0e1628; --surface:#152039; --surface-2:#1d2a47; --text:#e8eef8; --muted:#9aa8c0;
+    --line:#2a3858; --accent:#f07c70; --accent-soft:#3a2230; --warn:#f0c065; --warn-soft:#3a3020; --ink:#93b2ff;
+    --bj:#93b2ff; --sh:#6fd0c0; --hz:#e6c45a; --sz:#f19a5e; --tr:#9aa8c0;
+    --formal:#c9d6f2; --biz:#8fdccf; --casual:#e8b98a; --viaje:#9aa8c0; --shadow:none;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
@@ -42,7 +42,7 @@ a{color:var(--accent)}
 header{padding:28px 0 18px}
 .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:16px}
 .eyebrow{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
-h1{font-family:Fraunces,serif;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.05;margin:6px 0 6px}
+h1{font-family:'Noto Serif SC',serif;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.05;margin:6px 0 6px}
 .sub{color:var(--muted);max-width:640px}
 .clocks{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
 .clock{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 12px;min-width:92px;box-shadow:var(--shadow)}
@@ -58,7 +58,7 @@ nav a{flex:none;text-decoration:none;color:var(--text);font-size:.9rem;padding:6
 nav a:hover{background:var(--surface-2)}
 
 section{margin-top:36px}
-h2{font-family:Fraunces,serif;font-size:1.45rem;margin:0 0 4px}
+h2{font-family:'Noto Serif SC',serif;font-size:1.45rem;margin:0 0 4px}
 .lead{color:var(--muted);margin:0 0 14px;font-size:.93rem}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 
@@ -86,7 +86,7 @@ h2{font-family:Fraunces,serif;font-size:1.45rem;margin:0 0 4px}
 @media (max-width:760px){.cities{grid-template-columns:1fr}}
 .city{padding:18px;border-top:4px solid var(--c)}
 .city-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
-.city h3{margin:0;font-family:Fraunces,serif;font-size:1.4rem}
+.city h3{margin:0;font-family:'Noto Serif SC',serif;font-size:1.4rem}
 .city h3 small{font-family:Outfit,sans-serif;font-weight:500;color:var(--muted);font-size:.95rem;margin-left:6px}
 .meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .tag{font-size:.78rem;background:var(--surface-2);border-radius:999px;padding:2px 10px;color:var(--text)}
@@ -110,6 +110,8 @@ h2{font-family:Fraunces,serif;font-size:1.45rem;margin:0 0 4px}
 .sx{background:var(--surface-2);border-radius:10px;padding:8px 10px}
 .sx-h{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .sx p{margin:2px 0 0;font-size:.88rem}
+.acc{margin:12px 0 6px;font-size:.82rem;color:var(--muted)}
+.o-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.o-h small{color:var(--muted);font-size:.8rem}
 .also{margin:10px 0 0;font-size:.85rem;color:var(--muted)}
 .also b{color:var(--text)}
 .key{background:var(--accent-soft);border-radius:16px;padding:16px 18px;margin-top:14px}
@@ -135,7 +137,7 @@ tr:last-child td{border-bottom:0}
 .dchip.today::after{content:"HOY";position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:.58rem;font-weight:700;background:var(--accent);color:#fff;border-radius:4px;padding:0 4px}
 .dayview{padding:20px;border-top:4px solid var(--c)}
 .kicker{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c);font-weight:700;margin:0}
-.dayview h3{font-family:Fraunces,serif;font-size:1.6rem;margin:4px 0 0}
+.dayview h3{font-family:'Noto Serif SC',serif;font-size:1.6rem;margin:4px 0 0}
 .dayview .place{color:var(--muted);margin:2px 0 14px}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 @media (max-width:820px){.facts{grid-template-columns:repeat(2,1fr)}}
@@ -150,8 +152,8 @@ tr:last-child td{border-bottom:0}
 .outfit p{margin:4px 0 0;font-size:.93rem}
 .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:6px;color:#fff}
 .b-formal{background:var(--formal)} .b-biz{background:var(--biz)} .b-casual{background:var(--casual)} .b-viaje{background:var(--viaje)}
-:root[data-theme="dark"] .badge{color:#151413}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .badge{color:#151413}}
+:root[data-theme="dark"] .badge{color:#0e1628}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .badge{color:#0e1628}}
 .alert{display:flex;gap:10px;background:var(--warn-soft);border-radius:12px;padding:10px 12px;margin-top:10px;font-size:.9rem}
 .alert::before{content:"⚠";color:var(--warn);font-weight:700}
 .tl{list-style:none;margin:18px 0 0;padding:0}
@@ -177,7 +179,7 @@ tr:last-child td{border-bottom:0}
 .win-h{font-weight:600;margin-bottom:4px}
 .win table{min-width:0;width:100%;font-size:.86rem}
 .win td{padding:3px 0;border:0;vertical-align:top}
-.win td:first-child{width:52px;font-weight:700;font-variant-numeric:tabular-nums}
+.win td:first-child{width:66px;font-weight:700;font-variant-numeric:tabular-nums}
 .win td small{color:var(--muted)}
 .win tr.sala td{color:var(--sh);font-weight:600}
 .win tr.gate td{color:var(--accent);font-weight:600}
@@ -253,57 +255,239 @@ tr:last-child td{border-bottom:0}
 .pending-list ul{margin:0;padding-left:18px;font-size:.92rem}
 .pending-list li{margin:4px 0}
 
+
+/* ===== Rediseño: porcelana azul y blanca ===== */
+.eyebrow,th,.kicker,.fact span,.badge,.tl .mode,.group,.cgroup,.mbox span,.sx-h{text-transform:none;letter-spacing:0}
+.eyebrow{font-size:.9rem;font-weight:500;color:var(--ink)}
+.kicker{font-size:.9rem}
+.fact span{font-size:.78rem;font-weight:600}
+.badge{font-size:.78rem}
+.tl .mode{font-size:.76rem}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.01em;color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:6px}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:28px;align-items:start;padding-top:28px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.hero .top{display:block}
+.hero .clocks{margin-top:16px}
+/* boarding pass */
+.pass{margin-top:18px;display:grid;grid-template-columns:1fr auto;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.pass-main{padding:16px 18px;border-right:2px dashed var(--line)}
+.pass-main small{display:block;color:var(--muted);font-size:.82rem}
+.pass-main .pt{font-family:'Noto Serif SC',serif;font-size:2.1rem;line-height:1.05;color:var(--ink);font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.pass-main .pt span{font-family:Outfit,sans-serif;font-size:.9rem;color:var(--muted);font-weight:500;margin-left:6px}
+.pass-main h3{margin:6px 0 0;font-size:1.05rem}
+.pass-main .rel{display:inline-block;margin-top:8px;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.85rem;border-radius:999px;padding:2px 10px}
+.pass-stub{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:12px 16px;min-width:108px;text-align:center}
+.pass-stub .han{font-family:'Noto Serif SC',serif;font-size:1.7rem;color:var(--c,var(--ink));line-height:1}
+.pass-stub button{border:0;background:var(--ink);color:var(--surface);font:inherit;font-size:.85rem;font-weight:600;border-radius:999px;padding:6px 12px;cursor:pointer}
+.pass::before,.pass::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:var(--bg);right:calc(108px + 23px);border:1px solid var(--line)}
+.pass::before{top:-10px}.pass::after{bottom:-10px}
+@media (max-width:420px){.pass::before,.pass::after{display:none}}
+/* map */
+.map{margin:0;padding:10px 10px 6px;position:relative}
+.map svg{width:100%;height:auto;display:block}
+.map .node{cursor:pointer}
+.map .node circle.halo{fill:var(--c);opacity:.14;transition:opacity .2s}
+.map .node:hover circle.halo,.map .node:focus-visible circle.halo{opacity:.3}
+.map .node:focus{outline:none}
+.map .han{font-family:'Noto Serif SC',serif;font-weight:700;font-size:26px;fill:var(--c)}
+.map .lat{font-family:Outfit,sans-serif;font-weight:600;font-size:12px;fill:var(--text)}
+.map .dt{font-family:Outfit,sans-serif;font-size:10.5px;fill:var(--muted)}
+.map .rt{fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s ease forwards}
+.map .rl{font-family:Outfit,sans-serif;font-size:10px;fill:var(--muted)}
+.map .sea{font-family:'Noto Serif SC',serif;font-size:11px;fill:var(--ink);opacity:.45;font-style:italic}
+.map .wave{fill:none;stroke:var(--ink);opacity:.18;stroke-width:1.2}
+.map .grid{stroke:var(--line);stroke-width:.6}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.map .rt{animation:none;stroke-dashoffset:0}}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.8rem;color:var(--muted);padding:0 8px 6px}
+.legend i{display:inline-block;width:18px;height:0;border-top:3px solid var(--c);vertical-align:middle;margin-right:5px;border-radius:2px}
+.legend i.d{border-top-style:dashed}
+/* city watermark */
+.city{position:relative;overflow:hidden}
+.city::after{content:attr(data-han);position:absolute;right:-6px;top:-14px;font-family:'Noto Serif SC',serif;font-weight:700;font-size:5.5rem;color:var(--c);opacity:.07;pointer-events:none;line-height:1}
+.wx{font-size:1.3rem;margin-right:6px}
+/* timeline icons */
+.tl li{grid-template-columns:72px 30px 1fr;gap:10px}
+.tl-ico{width:30px;height:30px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-size:.95rem}
+.tl li.move .tl-ico{background:color-mix(in srgb,var(--c) 18%,transparent)}
+@media (max-width:520px){.tl li{grid-template-columns:52px 26px 1fr;gap:8px}.tl-ico{width:26px;height:26px;font-size:.85rem}}
+/* gear chips */
+.gear{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.gear span{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 6px;font-size:.82rem}
+.gear span b{font-size:1.05rem;font-weight:400}
+.dchip small .w{margin-left:2px}
+.swipe-hint{font-size:.8rem;color:var(--muted);margin:-2px 0 8px;display:none}
+/* bottom nav (mobile) */
+.bnav{display:none}
+@media (max-width:760px){
+  nav[aria-label="Secciones"]{display:none}
+  body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  .bnav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;top:auto;z-index:20;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bnav a{display:flex;flex-direction:column;align-items:center;gap:1px;text-decoration:none;color:var(--muted);font-size:.7rem;padding:4px 0;border-radius:10px}
+  .bnav a b{font-size:1.25rem;font-weight:400;line-height:1.2}
+  .bnav a.on{color:var(--ink);background:var(--surface-2)}
+  .swipe-hint{display:block}
+  html{scroll-padding-top:12px}
+}
+
+.maptabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;margin:4px 4px 6px;background:var(--surface-2)}
+.maptabs button{border:0;background:none;color:var(--muted);font:inherit;font-size:.86rem;font-weight:500;padding:5px 14px;border-radius:999px;cursor:pointer}
+.maptabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.map .cont{font-family:'Noto Serif SC',serif;font-size:12px;fill:var(--muted);opacity:.55;letter-spacing:.04em}
+.map .wn text{font-family:Outfit,sans-serif}
+.map .wn .n1{font-weight:600;font-size:11.5px;fill:var(--text)}
+.map .wn .n2{font-size:9.5px;fill:var(--muted)}
+.map .wn circle.halo{fill:var(--c);opacity:.15}
+.journey{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 8px 10px}
+.journey.one{grid-template-columns:1fr}
+@media (max-width:560px){.journey{grid-template-columns:1fr}}
+.jcol{background:var(--surface-2);border-radius:12px;padding:10px 12px}
+.jcol h4{margin:0;font-size:.95rem;color:var(--c)}
+.jcol .tot{font-size:.8rem;color:var(--muted);margin:1px 0 6px}
+.jcol ol{list-style:none;margin:0;padding:0;position:relative}
+.jcol li{position:relative;padding:0 0 8px 18px;font-size:.84rem;cursor:pointer}
+.jcol li::before{content:"";position:absolute;left:3px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--c)}
+.jcol li:not(:last-child)::after{content:"";position:absolute;left:6.5px;top:15px;bottom:-2px;border-left:1.5px dashed color-mix(in srgb,var(--c) 55%,transparent)}
+.jcol li b{font-weight:600}
+.jcol li small{display:block;color:var(--muted);font-size:.76rem}
+.jcol li.stay::before{background:var(--surface);border:2px solid var(--c);width:6px;height:6px}
+
+.stick{position:sticky;top:0;z-index:15;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.stick nav[aria-label="Secciones"]{position:static;background:none;backdrop-filter:none;border:0;border-top:1px solid var(--line)}
+.clockbar{display:flex;align-items:center;gap:6px 18px;padding-top:8px;padding-bottom:8px;overflow-x:auto;scrollbar-width:none}
+.ck{display:flex;align-items:baseline;gap:6px;white-space:nowrap;flex:none}
+.ck-l{font-size:.82rem;color:var(--muted)}
+.ck b{font-size:1.08rem;font-variant-numeric:tabular-nums;color:var(--text)}
+.ck small{font-size:.75rem;color:var(--muted)}
+.ck{border-radius:999px;padding:3px 10px 3px 8px}
+.ck.on{background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.ck.on .ck-l{color:var(--ink);font-weight:600}
+.ck-d{color:var(--ink)!important;font-weight:600}
+.ck-d:empty{display:none}
+.ck.st{margin-left:auto}
+.ck.st b{color:var(--accent);font-size:.95rem}
+.clockbar .theme-btn{padding:2px 10px;font-size:1rem;min-width:0;height:30px;flex:none}
+html{scroll-padding-top:110px}
+@media (max-width:760px){
+  .clockbar{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:4px;padding-top:6px;padding-bottom:6px;overflow:visible}
+  .ck{flex-direction:column;align-items:center;gap:0;padding:3px 2px;border-radius:12px;min-width:0}
+  .ck-l{font-size:.7rem}.ck b{font-size:1rem;line-height:1.15}.ck-o{font-size:.65rem!important}
+  .ck-d{font-size:.62rem!important;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ck.st{display:none}
+  html{scroll-padding-top:70px}}
+
+.cis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:820px){.cis{grid-template-columns:1fr}}
+.ci{padding:16px;border-left:4px solid var(--c)}
+.ci-h{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ci-h h3{margin:0;font-size:1.02rem}
+.ci-h span{font-size:.8rem;color:var(--muted)}
+.ci .when{margin:10px 0 8px;background:var(--surface-2);border-radius:10px;padding:8px 10px;font-size:.88rem}
+.ci .when b{color:var(--ink)}
+.ci dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0;font-size:.87rem}
+.ci dt{color:var(--muted)}
+.ci dd{margin:0}
+.ci .btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:.84rem;font-weight:500;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:5px 12px}
+.btn.pri{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.btn.vid{border-color:color-mix(in srgb,var(--accent) 40%,var(--line));color:var(--accent)}
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:820px){.apps{grid-template-columns:1fr}}
+.app{padding:16px;display:grid;grid-template-columns:44px 1fr;gap:12px}
+.app .ai{width:44px;height:44px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;font-size:1.4rem}
+.app h3{margin:0;font-size:1.02rem}
+.app .why{margin:2px 0 6px;color:var(--muted);font-size:.86rem}
+.app ol{margin:0 0 8px;padding-left:18px;font-size:.86rem}
+.app ol li{margin:2px 0}
+.app .tag{font-size:.72rem;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:1px 8px;margin-left:6px;font-weight:600;vertical-align:middle}
+.app .btns{display:flex;flex-wrap:wrap;gap:6px}
+
+.xtabs{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none}
+.xtabs button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:.9rem;border-radius:999px;padding:6px 14px;cursor:pointer}
+.xtabs button .h{font-family:'Noto Serif SC',serif;color:var(--c);margin-right:4px}
+.xtabs button[aria-selected="true"]{background:var(--c);border-color:var(--c);color:var(--surface)}
+.xtabs button[aria-selected="true"] .h{color:var(--surface)}
+.xview{padding:20px;border-top:4px solid var(--c)}
+.xview .free{background:var(--surface-2);border-radius:12px;padding:10px 12px;font-size:.88rem;margin:8px 0 16px}
+.xview .free b{color:var(--c)}
+.xcols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.xcols{grid-template-columns:1fr}}
+.xcols h3{font-size:1.02rem;margin:0 0 8px}
+.xl{list-style:none;margin:0;padding:0}
+.xl li{display:grid;grid-template-columns:30px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.xl .e{font-size:1.2rem;line-height:1.3}
+.xl b{font-weight:600}
+.xl .zh{font-family:'Noto Serif SC',serif;color:var(--c);margin-left:6px;font-size:.92rem}
+.xl p{margin:2px 0 0;font-size:.86rem;color:var(--muted)}
+.xl a{font-size:.8rem}
+.xtips{margin:14px 0 0;padding:10px 12px;border-radius:12px;background:var(--accent-soft);font-size:.86rem}
+.dayx{margin-top:12px}
+
 footer{margin:48px 0 32px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:16px}
 footer ul{padding-left:18px;margin:6px 0}
 </style>
 </head>
 <body>
-<header class="wrap">
-  <div class="top">
-    <div>
-      <div class="eyebrow">Corporación Universitaria Americana · Institución Universitaria del Litoral · asiaBconsulting</div>
-      <h1>Misión China 2026</h1>
-      <div class="sub">Agenda en China del 4 al 15 de noviembre (11 noches). Viaje completo desde Colombia del 2 al 17. Itinerario, transporte, clima y vestuario en un solo lugar.</div>
-    </div>
-    <div class="clocks">
-      <div class="clock"><b id="clkCO">--:--</b><span>Colombia</span></div>
-      <div class="clock"><b id="clkCN">--:--</b><span>China (+13 h)</span></div>
-      <div class="clock status"><b id="stA">—</b><span id="stB"></span></div>
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar tema">◐</button>
-    </div>
+<div class="stick">
+  <div class="wrap clockbar">
+    <div class="ck" id="ckCO"><span class="ck-l">🇨🇴 Colombia</span><b id="clkCO">--:--</b><small class="ck-d"></small></div>
+    <div class="ck" id="ckEU"><span class="ck-l">🇪🇺 Europa</span><b id="clkEU">--:--</b><small class="ck-o" id="offEU"></small><small class="ck-d"></small></div>
+    <div class="ck" id="ckCN"><span class="ck-l">🇨🇳 China</span><b id="clkCN">--:--</b><small class="ck-o" id="offCN"></small><small class="ck-d"></small></div>
+    <div class="ck st"><b id="stA">—</b><small id="stB"></small></div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar entre tema claro y oscuro">🌓</button>
   </div>
+  <nav aria-label="Secciones"><div class="wrap">
+    <a href="#inicio">Inicio</a><a href="#ciudades">Clima y vestuario</a><a href="#explorar">Visitas y comida</a><a href="#agenda">Día a día</a><a href="#trayectos">Trayectos</a><a href="#hoteles">Hoteles</a><a href="#checkin">Check-in</a><a href="#apps">Apps</a><a href="#preparacion">Preparación</a><a href="#pendientes">Por confirmar</a>
+  </div></nav>
+</div>
+<header class="wrap hero" id="inicio">
+  <div class="top">
+    <p class="eyebrow">Corporación Universitaria Americana e Institución Universitaria del Litoral, con asiaBconsulting</p>
+    <h1>Misión China 2026</h1>
+    <p class="sub">Del 2 al 17 de noviembre: cuatro ciudades y once noches en China. Aquí está lo que hay que hacer, ponerse y llevar cada día.</p>
+    <div class="pass" id="next" aria-live="polite"></div>
+  </div>
+  <figure class="card map" id="ruta">
+    <div class="maptabs" role="tablist" aria-label="Vista del mapa">
+      <button type="button" role="tab" data-map="ida" aria-selected="false">✈️ Ida</button>
+      <button type="button" role="tab" data-map="china" aria-selected="false">Dentro de China</button>
+      <button type="button" role="tab" data-map="vuelta" aria-selected="false">Vuelta 🏠</button>
+    </div>
+    <div id="mapSvg"></div>
+    <figcaption class="legend" id="mapLegend"></figcaption>
+    <div id="journey"></div>
+  </figure>
+</header>
+<div class="wrap">
   <div class="kpis">
-    <div class="card kpi"><b>16</b><span>días de viaje (2–17 nov)</span></div>
+    <div class="card kpi"><b>16</b><span>días de viaje</span></div>
     <div class="card kpi"><b>11</b><span>noches en China</span></div>
     <div class="card kpi"><b>4</b><span>ciudades</span></div>
     <div class="card kpi"><b>0–23 °C</b><span>de Beijing a Shenzhen</span></div>
-    <div class="card kpi"><b>20 + 12 kg</b><span>maleta + equipaje de mano</span></div>
+    <div class="card kpi"><b>20 + 12 kg</b><span>maleta y equipaje de mano</span></div>
   </div>
-</header>
+</div>
 
-<nav aria-label="Secciones"><div class="wrap">
-  <a href="#ruta">Ruta</a><a href="#ciudades">Clima y vestuario</a><a href="#agenda">Día a día</a><a href="#trayectos">Trayectos</a><a href="#hoteles">Hoteles</a><a href="#preparacion">Preparación</a><a href="#pendientes">Por confirmar</a>
-</div></nav>
+
+<nav class="bnav" aria-label="Navegación rápida">
+  <a href="#inicio" data-sec="inicio"><b>🧭</b>Inicio</a>
+  <a href="#agenda" data-sec="agenda"><b>📅</b>Día a día</a>
+  <a href="#trayectos" data-sec="trayectos"><b>✈️</b>Vuelos</a>
+  <a href="#ciudades" data-sec="ciudades"><b>🧥</b>Ropa</a>
+  <a href="#preparacion" data-sec="preparacion"><b>✅</b>Preparar</a>
+</nav>
 
 <main class="wrap">
-  <section id="ruta">
-    <h2>Ruta</h2>
-    <p class="lead">Toca una parada para abrir ese día.</p>
-    <div class="card" style="padding:6px 14px 10px"><div class="route" id="route"></div></div>
-  </section>
 
   <section id="ciudades">
     <h2>Clima y vestuario por ciudad</h2>
-    <div id="whoCity"></div><p class="lead">Rangos típicos de noviembre según la guía del viaje, no pronóstico. En la agenda día a día aparece el pronóstico real cuando la fecha entra en los próximos 16 días.</p>
+    <p class="lead">Rangos típicos de noviembre según la guía del viaje, no pronóstico. <b>El vestuario es una sugerencia</b> según el clima y el tipo de actividad: ajústalo a tu estilo y al pronóstico real, que aparece en cada día cuando faltan menos de 16 días.</p><div id="whoCity"></div>
     <div class="cities" id="cities"></div>
-    <div class="card tbl-wrap"><table>
-      <thead><tr><th>Ciudad</th><th>Fechas</th><th>Noches</th><th>Temperatura</th><th>Hotel</th><th>Vestuario clave</th></tr></thead>
-      <tbody id="sumTable"></tbody>
-    </table></div>
     <div class="key"><strong>Para todo el viaje</strong>
       <ul>
         <li>Vestir en capas: de 0 °C en Beijing a 23 °C en Shenzhen.</li>
-        <li>2–3 atuendos formales livianos para reuniones (Embajada, universidades, empresas) y un traje formal para el 6 de noviembre. <b>Hombres:</b> traje oscuro, 2 pantalones de tela, camisas claras, corbata y blazer. <b>Mujeres:</b> traje sastre o vestido con blazer, pantalones de tela, blusas y medias gruesas para Beijing.</li>
+        <li>2–3 atuendos formales livianos para reuniones (Embajada, universidades, empresas) y uno formal completo para el 6 de noviembre.</li>
         <li>Estilo sobrio en reuniones: colores neutros, escote y largo discretos, accesorios sencillos.</li>
         <li>Zapato cómodo y cerrado: hay mucha caminata.</li>
         <li>Un impermeable liviano o paraguas compacto.</li>
@@ -311,10 +495,17 @@ footer ul{padding-left:18px;margin:6px 0}
     </div>
   </section>
 
+  <section id="explorar">
+    <h2>Qué visitar y qué comer</h2>
+    <p class="lead">Ideas para el tiempo libre de la agenda. <b>Son sugerencias, no están incluidas en el programa:</b> confirma horarios y entradas antes de ir, y avisa siempre al coordinador si te separas del grupo.</p>
+    <div class="xtabs" role="tablist" aria-label="Lugar" id="xtabs"></div>
+    <div class="card xview" id="xview"></div>
+  </section>
+
   <section id="agenda">
     <h2>Itinerario día a día</h2>
     <p class="lead">Horarios de la agenda de asiaBconsulting del 30 de septiembre. Pueden cambiar: la app Planify se actualiza a diario.</p>
-    <div id="whoDay"></div><div class="daychips" id="daychips"></div>
+    <div id="whoDay"></div><div class="daychips" id="daychips"></div><p class="swipe-hint">Desliza la tarjeta a los lados para cambiar de día.</p>
     <div class="card dayview" id="dayview"></div>
   </section>
 
@@ -328,6 +519,24 @@ footer ul{padding-left:18px;margin:6px 0}
     <h2>Dónde dormimos</h2>
     <p class="lead">Los mismos hoteles para todo el grupo. La distribución de habitaciones la maneja asiaBconsulting.</p>
     <div class="hotels" id="hotels"></div>
+  </section>
+
+  <section id="checkin">
+    <h2>Check-in de cada vuelo</h2>
+    <p class="lead">Dónde y desde cuándo hacer el check-in. Son tres reservas distintas: LATAM (vuelos nacionales), KLM (ida y regreso internacional) y China Eastern dentro de la agenda del grupo.</p>
+    <div class="cis" id="cis"></div>
+    <div class="key" style="margin-top:12px"><strong>Antes del regreso</strong>
+      <ul>
+        <li>Al documentar en Shenzhen, pregunta hasta dónde va la maleta. Si llega directo a Bogotá, lleva en el equipaje de mano lo necesario para las noches en Shanghái y Ámsterdam.</li>
+        <li>Para el check-in de KLM necesitas tu código de reserva y tu apellido. Están en el itinerario de Colaereo y no se publican aquí.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="apps">
+    <h2>Apps para descargar y configurar</h2>
+    <p class="lead">Instálalas y configúralas en Colombia, con tu número y buena conexión. Algunas piden verificar identidad y eso puede tardar hasta un día. Cada una trae enlace de descarga y videos de configuración.</p>
+    <div class="apps" id="appsList"></div>
   </section>
 
   <section id="preparacion">
@@ -365,6 +574,7 @@ footer ul{padding-left:18px;margin:6px 0}
         <li><b>Hotel en Shanghái la noche del 15 de noviembre.</b> No aparece en la agenda ni en los tiquetes; el vuelo a Ámsterdam sale el 16 a las 11:05 desde Pudong T1.</li>
         <li><b>Hotel en Ámsterdam la noche del 16 de noviembre.</b> No aparece en los tiquetes; el vuelo a Bogotá sale el 17 a las 9:20.</li>
         <li><b>Salida del 15 de noviembre:</b> la tabla de transporte dice 3:00 p. m., pero esa es la salida del hotel. El vuelo MU5352 sale a las 19:10 del T3 de Shenzhen Bao'an.</li>
+        <li><b>Vuelos Barranquilla ↔ Bogotá (LATAM):</b> van en un tiquete aparte del de KLM, así que la maleta no pasa directa. En Bogotá hay que recogerla y documentarla otra vez, tanto a la ida como a la vuelta.</li>
         <li><b>Puertas de embarque:</b> los tiquetes no traen puerta; se asigna el día del vuelo. Revisa el pase de abordar o las pantallas, porque puede cambiar.</li>
         <li><b>Aeropuerto de salida del vuelo MU5331</b> (12 nov) en Shanghái: confirmar en Planify.</li>
         <li><b>13 de noviembre:</b> la agenda pone Huaqiangbei a las 17:30 y el regreso al hotel a la misma hora.</li>
@@ -384,6 +594,7 @@ footer ul{padding-left:18px;margin:6px 0}
     <li>Itinerario Colaereo del grupo (KLM, Air France y China Eastern), emitido el 1 de agosto de 2026.</li>
     <li>Tiempos de aeropuerto: <a href="https://www.klm.com/information/airport/boarding-times" target="_blank" rel="noopener">KLM, horarios de embarque</a>, Air France (cierre de check-in en CDG), China Eastern (cierre de mostrador y puerta) y Gobierno de Shanghái (cierre de check-in en Pudong).</li>
     <li>Sitios del grupo: <a href="https://ljaver.github.io/mision-china-2026/" target="_blank" rel="noopener">ljaver.github.io/mision-china-2026</a> y <a href="https://leovassallo07.github.io/china-trip-2026/" target="_blank" rel="noopener">leovassallo07.github.io/china-trip-2026</a>.</li>
+    <li>Check-in: <a href="https://www.klm.com/information/airport/check-in-times" target="_blank" rel="noopener">KLM, horarios de check-in</a> y <a href="https://www.latamairlines.com/co/es/centro-ayuda/preguntas/check-in/automatico/disponible-pasajeros" target="_blank" rel="noopener">LATAM, check-in automático</a>. Configuración de Alipay: <a href="https://www.wanderinchina.com/es/survival-guide/payment/alipay/" target="_blank" rel="noopener">Wander in China</a>.</li>
     <li>Pronóstico en vivo: Open-Meteo. Tasas de cambio: ExchangeRate-API.</li>
   </ul>
   Horarios sujetos a cambios por circunstancias ajenas a asiaBconsulting.
@@ -419,11 +630,14 @@ const MODE={flight:'Avión',arrive:'Llegada',train:'Tren de alta velocidad',bus:
 const MOVE=new Set(['flight','arrive','train','bus','transfer']);
 
 const DAYS=[
-{id:'02',date:'2026-11-02',wd:'Lun',long:'Lunes 2 de noviembre',c:'tr',place:'Bogotá → Ámsterdam',tz:'Hora de Colombia',sleep:'A bordo del KL745',
- wx:'Bogotá fresco; avión',transport:'Avión KLM KL745',
+{id:'02',date:'2026-11-02',wd:'Lun',long:'Lunes 2 de noviembre',c:'tr',place:'Barranquilla → Bogotá → Ámsterdam',tz:'Hora de Colombia',sleep:'A bordo del KL745',
+ wx:'Bogotá fresco; avión',transport:'LATAM LA4161 desde Barranquilla + KLM KL745',
  dress:['viaje','Ropa cómoda de viaje en capas y abrigo a mano: al llegar a Ámsterdam y a Beijing hace frío.'],
  alerts:['Si llegas a Bogotá en un vuelo nacional con otro tiquete, recoge la maleta y vuelve a documentarla en el counter de KLM, Terminal 1.','Lleva a mano el pasaporte con la visa china.'],
  items:[
+ {t:'07:20',k:'info',title:'Estar en el aeropuerto de Barranquilla (Ernesto Cortissoz)',note:'Sugerido: 2 horas antes del vuelo nacional.'},
+ {t:'09:20',e:'10:55',k:'flight',f:'BAQ1',title:'Barranquilla → Bogotá',sub:'LATAM LA4161',meta:['Premium Economy','1 h 35 min','Tiquete aparte del de KLM'],note:'Al aterrizar, recoge la maleta y llévala al counter de KLM en la Terminal 1.'},
+ {t:'10:55',e:'13:05',k:'free',title:'Espera en El Dorado, 2 h 10 min',note:'Tiempo para recoger la maleta, almorzar algo y esperar a que abra el counter de KLM.'},
  {t:'13:05',k:'info',title:'Estar en El Dorado, Terminal 1',note:'Sugerido: 3 horas antes del vuelo internacional.'},
  {t:'16:05',k:'flight',f:'KL745',title:'Bogotá → Ámsterdam',sub:'KLM KL745, con escala en Cartagena (17:35 a 18:55)',meta:['Premium Economy','Boeing 787-9','12 h 40 min','Terminal 1','1 maleta documentada'],note:'Llega a Ámsterdam el martes 3 a las 10:45, hora local.'}]},
 {id:'03',date:'2026-11-03',wd:'Mar',long:'Martes 3 de noviembre',c:'tr',place:'Ámsterdam → París → Beijing',tz:'Hora de Europa (UTC+1), 6 h más que Colombia',sleep:'A bordo del AF382',
@@ -572,14 +786,16 @@ const DAYS=[
  {t:'11:05',e:'18:25',k:'flight',f:'KL896',title:'Shanghái → Ámsterdam',sub:'KLM KL896',meta:['Premium Economy','Boeing 787-9','14 h 20 min','Terminal 1']},
  {t:'18:25',k:'arrive',title:'Llegada a Ámsterdam (Schiphol)'},
  {t:'19:30',k:'free',title:'Noche en Ámsterdam'}]},
-{id:'17',date:'2026-11-17',wd:'Mar',long:'Martes 17 de noviembre',c:'tr',place:'Ámsterdam → Bogotá',tz:'Sales con hora de Europa y llegas con hora de Colombia',sleep:'En casa',
- wx:'Bogotá fresco',transport:'Avión KLM KL749',
+{id:'17',date:'2026-11-17',wd:'Mar',long:'Martes 17 de noviembre',c:'tr',place:'Ámsterdam → Bogotá → Barranquilla',tz:'Sales con hora de Europa y llegas con hora de Colombia',sleep:'En casa',
+ wx:'Bogotá fresco',transport:'KLM KL749 + LATAM LA4146 a Barranquilla',
  dress:['viaje','Ropa cómoda de viaje en capas.'],
  alerts:['Desde Bogotá, cada participante continúa a su ciudad con su propio tiquete nacional.'],
  items:[
  {t:'06:20',k:'info',title:'Estar en Schiphol',note:'Sugerido: 3 horas antes.'},
  {t:'09:20',e:'14:30',k:'flight',f:'KL749',title:'Ámsterdam → Bogotá',sub:'KLM KL749',meta:['Premium Economy','Boeing 787-10','11 h 10 min','Llega a la Terminal 1']},
- {t:'14:30',k:'arrive',title:'Llegada a Bogotá, El Dorado',note:'Si sigues en un vuelo nacional, documéntalo de nuevo con tu aerolínea.'}]}
+ {t:'14:30',k:'arrive',title:'Llegada a Bogotá, El Dorado',note:'Migración, recogida de maleta y aduana.'},
+ {t:'16:00',k:'info',z:-5,title:'Documentar la maleta en LATAM',note:'Después de migración y aduana. Tienes unas 3 h 55 min entre la llegada del KL749 y la salida a Barranquilla.'},
+ {t:'18:25',e:'20:00',k:'flight',z:-5,f:'BAQ2',title:'Bogotá → Barranquilla',sub:'LATAM LA4146',meta:['Premium Economy','1 h 35 min'],note:'Llegada a Barranquilla a las 20:00. Fin del viaje.'}]}
 ];
 
 
@@ -588,6 +804,10 @@ const DAYS=[
    "En sala" se calcula con margen: 60 min antes en intercontinentales y 40–45 min en vuelos cortos. */
 const GATE='Puerta: se asigna el día del vuelo. Mírala en el pase de abordar, la app de la aerolínea o las pantallas, y vuelve a revisarla: puede cambiar.';
 const TIMES={
+ BAQ1:{where:'Barranquilla (Ernesto Cortissoz) → Bogotá El Dorado · LATAM LA4161',rows:[['07:20','Llegar al aeropuerto de Barranquilla','2 h antes'],['08:35','Cierre aproximado de entrega de maleta','~45 min antes; la hora exacta va en el pase'],['08:40','Estar en sala de embarque','40 min antes'],['09:00','Cierre aproximado de puerta','~20 min antes'],['10:55','Aterrizas en Bogotá','recoge la maleta'],['13:05','Estar en el counter de KLM, Terminal 1','abre 3 h antes del KL745']],
+   note:'El tiquete de LATAM va aparte del de KLM: la maleta no pasa directa. Recógela en Bogotá y documéntala otra vez en KLM.'},
+ BAQ2:{where:'Bogotá El Dorado → Barranquilla · LATAM LA4146',rows:[['14:30','Aterrizas en Bogotá en el KL749',''],['~16:00','Migración, maleta y aduana','tiempo estimado'],['17:40','Cierre aproximado de entrega de maleta en LATAM','~45 min antes; la hora exacta va en el pase'],['17:45','Estar en sala de embarque','40 min antes'],['18:05','Cierre aproximado de puerta','~20 min antes'],['20:00','Llegas a Barranquilla','']],
+   note:'Si el KL749 se retrasa más de 2 horas, llama a LATAM para mover el vuelo: la tarifa permite cambios.'},
  KL745:{where:'Bogotá El Dorado · Terminal 1',rows:[['13:05','Llegar al aeropuerto','3 h antes'],['15:05','Cierre de check-in y entrega de maleta','60 min antes'],['15:05','Estar en sala de embarque','tras migración de salida'],['15:50','Cierre de puerta','~15 min antes']],
    note:'Escala en Cartagena (17:35–18:55): sigue las instrucciones de la tripulación; el vuelo continúa a Ámsterdam.'},
  KL1407:{where:'Ámsterdam Schiphol · conexión de 1 h 40 min',rows:[['10:45','Aterrizas en Schiphol',''],['11:00','Migración Schengen (entrada a Europa)','ve directo, sin desvíos'],['11:45','Estar en sala de embarque','40 min antes'],['12:10','Cierre de puerta','~15 min antes']],
@@ -662,6 +882,7 @@ const STOPS=[
 ];
 
 const LEGS=[
+{g:'Ida',m:'Avión',c:'tr',date:'Lun 2 nov',from:'Barranquilla',dep:'09:20',to:'Bogotá',arr:'10:55',code:'LATAM LA4161',f:'BAQ1',meta:'Premium Economy, 1 h 35 min. Tiquete aparte: la maleta se documenta otra vez en KLM',day:'02'},
 {g:'Ida',m:'Avión',c:'tr',date:'Lun 2 nov',from:'Bogotá',dep:'16:05',to:'Ámsterdam',arr:'10:45',plus:1,code:'KLM KL745',f:'KL745',meta:'Premium Economy, escala en Cartagena, 12 h 40 min',day:'02'},
 {g:'Ida',m:'Avión',c:'tr',date:'Mar 3 nov',from:'Ámsterdam',dep:'12:25',to:'París CDG',arr:'13:40',code:'KLM KL1407',f:'KL1407',meta:'Economy, llega a la Terminal 2F',day:'03'},
 {g:'Ida',m:'Avión',c:'bj',date:'Mar 3 nov',from:'París CDG',dep:'23:20',to:'Beijing PEK',arr:'17:40',plus:1,code:'Air France AF382 (KL2066)',f:'AF382',meta:'Premium Economy, T2E → T2, 11 h 20 min',day:'03'},
@@ -670,7 +891,8 @@ const LEGS=[
 {g:'Dentro de China',m:'Avión',c:'sz',date:'Jue 12 nov',from:'Shanghái',dep:'09:10',to:'Shenzhen',arr:'11:40',code:'China Eastern MU5331',f:'MU5331',meta:'Salida del hotel a las 06:15',day:'12'},
 {g:'Dentro de China',m:'Avión',c:'tr',date:'Dom 15 nov',from:'Shenzhen SZX',dep:'19:10',to:'Shanghái PVG',arr:'21:25',code:'China Eastern MU5352 (KL8817)',f:'MU5352',meta:'Economy, T3 → T1. Salida del hotel a las 15:00',day:'15'},
 {g:'Regreso',m:'Avión',c:'tr',date:'Lun 16 nov',from:'Shanghái PVG',dep:'11:05',to:'Ámsterdam',arr:'18:25',code:'KLM KL896',f:'KL896',meta:'Premium Economy, 14 h 20 min',day:'16'},
-{g:'Regreso',m:'Avión',c:'tr',date:'Mar 17 nov',from:'Ámsterdam',dep:'09:20',to:'Bogotá',arr:'14:30',code:'KLM KL749',f:'KL749',meta:'Premium Economy, 11 h 10 min',day:'17'}
+{g:'Regreso',m:'Avión',c:'tr',date:'Mar 17 nov',from:'Ámsterdam',dep:'09:20',to:'Bogotá',arr:'14:30',code:'KLM KL749',f:'KL749',meta:'Premium Economy, 11 h 10 min',day:'17'},
+{g:'Regreso',m:'Avión',c:'tr',date:'Mar 17 nov',from:'Bogotá',dep:'18:25',to:'Barranquilla',arr:'20:00',code:'LATAM LA4146',f:'BAQ2',meta:'Premium Economy, 1 h 35 min',day:'17'}
 ];
 
 const HOTELS=[
@@ -693,7 +915,7 @@ const CHECKS=[
  ['wec','WeChat',''],
  ['ali','Alipay con tu tarjeta vinculada','El medio de pago más usado en China.'],
  ['esi','eSIM comprada antes de viajar','Airalo, Holafly, Nomad o SimOptions, desde USD 5 y sin VPN.']]},
-{g:'Vestuario',items:[
+{g:'Vestuario sugerido',items:[
  ['v1','Abrigo grueso','Beijing, 0–12 °C.'],
  ['v2','2–3 suéteres y camisetas térmicas',''],
  ['v3','Bufanda, guantes y gorro','Indispensables en la Gran Muralla.'],
@@ -726,30 +948,122 @@ const $=s=>document.querySelector(s);
 const tryGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
 const trySet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
 
-/* ---------- Route ---------- */
-$('#route').innerHTML=STOPS.map((s,i)=>{
-  const nx=STOPS[i+1];
-  const ln=nx?`<span class="ln"><small>${nx.m}</small></span>`:'';
-  return `<button class="stop c-${s.c}${s.major?' major':''}" data-day="${s.day}" type="button"><span class="track"><span class="pin"></span>${ln}</span><span class="nm">${s.n}</span><span class="dt">${s.d}</span></button>`;
-}).join('');
+const WXI={bj:'🌬️',sh:'🌦️',hz:'🌦️',sz:'☀️',tr:'✈️'};
+/* ---------- Mapa ilustrado ---------- */
+const GEO={bj:[116.40,39.90,'04','4–9 nov'],sh:[121.47,31.23,'09','9–12 nov'],hz:[120.16,30.27,'10','10 nov'],sz:[114.06,22.54,'12','12–15 nov']};
+const X=lon=>30+(lon-108)*22, Y=lat=>26+(42-lat)*13.4;
+function mapSVG(){
+  const pt=k=>[X(GEO[k][0]),Y(GEO[k][1])];
+  const [bx,by]=pt('bj'),[sx,sy]=pt('sh'),[hx,hy]=pt('hz'),[zx,zy]=pt('sz');
+  const waves=[[338,214],[352,236],[330,258],[350,280],[300,306],[340,302],[365,190]].map(([x,y])=>`<path class="wave" d="M${x} ${y} q6 -5 12 0 t12 0 t12 0"/>`).join('');
+  const grid=[80,160,240].map(y=>`<line class="grid" x1="0" y1="${y}" x2="400" y2="${y}" stroke-dasharray="2 6"/>`).join('')+[120,240,360].map(x=>`<line class="grid" x1="${x}" y1="0" x2="${x}" y2="320" stroke-dasharray="2 6"/>`).join('');
+  const route=(d,c,w,dash,delay)=>`<path class="rt" pathLength="1" d="${d}" style="stroke:var(--${c});stroke-width:${w};animation-delay:${delay}s"/>${dash?`<path d="${d}" fill="none" stroke="var(--bg)" stroke-width="${w+.6}" stroke-dasharray="0 7" stroke-linecap="round" style="opacity:.9"/>`:''}`;
+  const node=(k,r,lx,ly,anchor)=>{const c=CITIES[k],[x,y]=pt(k);
+    return `<g class="node c-${k}" data-day="${GEO[k][2]}" tabindex="0" role="button" aria-label="${c.name}, ${GEO[k][3]}. Abrir el día">
+      <circle class="halo" cx="${x}" cy="${y}" r="${r+9}"/><circle cx="${x}" cy="${y}" r="${r}" fill="var(--c)" stroke="var(--surface)" stroke-width="3"/>
+      <text class="han" x="${x+lx}" y="${y+ly}" text-anchor="${anchor}">${c.han}</text>
+      <text class="lat" x="${x+lx}" y="${y+ly+16}" text-anchor="${anchor}">${c.name}</text>
+      <text class="dt" x="${x+lx}" y="${y+ly+29}" text-anchor="${anchor}">${GEO[k][3]} · ${c.min}–${c.max} °C</text></g>`};
+  return `<svg viewBox="0 0 400 330" role="img" aria-label="Mapa de la ruta: llegada en avión a Beijing, tren a Shanghái, excursión en bus a Hangzhou, vuelo a Shenzhen y regreso por Shanghái">
+  ${grid}${waves}
+  <text class="sea" x="372" y="250" text-anchor="middle">东海</text>
+  <text class="sea" x="250" y="322" text-anchor="middle">南海</text>
+  ${route(`M8 8 Q120 6 ${bx} ${by}`,'tr',1.6,true,0)}
+  <text class="rl" x="12" y="24">desde París · AF382</text>
+  ${route(`M${bx} ${by} L${sx} ${sy}`,'sh',3.2,false,.5)}
+  <text class="rl" x="${(bx+sx)/2+8}" y="${(by+sy)/2-4}">Tren G3 · 4 h 40</text>
+  ${route(`M${sx} ${sy} Q${sx+4} ${hy+26} ${hx} ${hy}`,'hz',2.4,true,1)}
+  ${route(`M${sx} ${sy} Q${sx-90} ${sy+70} ${zx} ${zy}`,'sz',2.2,true,1.3)}
+  <text class="rl" x="222" y="268">MU5331</text>
+  ${route(`M${zx} ${zy} Q${sx+14} ${zy+10} ${sx+4} ${sy+6} Q${sx+30} ${sy+30} 396 ${sy+52}`,'tr',1.6,true,1.7)}
+  <text class="rl" x="396" y="${sy+68}" text-anchor="end">a Ámsterdam · KL896</text>
+  ${node('bj',8,-14,-2,'end')}${node('sh',7,-16,-42,'end')}${node('hz',5,-14,24,'end')}${node('sz',7,-14,-8,'end')}
+  </svg>`;
+}
+
+const UT0=(d,t,z)=>{const [y,m,dd]=d.split('-').map(Number),[hh,mm]=t.split(':').map(Number);return Date.UTC(y,m-1,dd,hh,mm)-z*36e5};
+/* ---------- Mapa del viaje completo (proyección simple lat/lon) ---------- */
+const WPTS={baq:[-74.78,10.89,'Barranquilla','','02'],bog:[-74.07,4.71,'Bogotá','El Dorado','02'],ctg:[-75.51,10.39,'Cartagena','escala','02'],ams:[4.76,52.31,'Ámsterdam','Schiphol','03'],cdg:[2.55,49.01,'París','CDG','03'],pek:[116.6,40.08,'Beijing','PEK','04'],pvg:[121.8,31.14,'Shanghái','Pudong','16'],szx:[113.81,22.64,'Shenzhen','Bao\'an','15']};
+const WX_=lon=>14+(lon+85)*1.78, WY_=lat=>18+(66-lat)*3.55;
+function wp(k){return [WX_(WPTS[k][0]),WY_(WPTS[k][1])]}
+function arc(a,b,lift,c,w,delay){const [x1,y1]=wp(a),[x2,y2]=wp(b),mx=(x1+x2)/2,my=(y1+y2)/2-lift;
+  return `<path class="rt" pathLength="1" d="M${x1} ${y1} Q${mx} ${my} ${x2} ${y2}" style="stroke:var(--${c});stroke-width:${w};animation-delay:${delay}s"/>`}
+function worldSVG(which){
+  const grid=[0,30,60].map(l=>`<line class="grid" x1="0" x2="400" y1="${WY_(l)}" y2="${WY_(l)}" stroke-dasharray="2 6"/>`).join('')+[-60,0,60,120].map(l=>`<line class="grid" y1="0" y2="270" x1="${WX_(l)}" x2="${WX_(l)}" stroke-dasharray="2 6"/>`).join('');
+  const lab=(k,c,dx,dy,anchor,sub,top)=>{const [x,y]=wp(k),P=WPTS[k];if(top){return `<g class="wn node" style="--c:var(--${c})" data-day="${P[4]}" tabindex="0" role="button" aria-label="${P[2]}. Abrir el día"><circle class="halo" cx="${x}" cy="${y}" r="8"/><circle cx="${x}" cy="${y}" r="3.4" fill="var(--c)" stroke="var(--surface)" stroke-width="1.4"/><text class="n1" x="${x-8}" y="${y-38}" text-anchor="start">${P[2]}</text><text class="n2" x="${x-8}" y="${y-27}" text-anchor="start">${sub}</text></g>`}
+    return `<g class="wn node" style="--c:var(--${c})" data-day="${P[4]}" tabindex="0" role="button" aria-label="${P[2]}. Abrir el día">
+      <circle class="halo" cx="${x}" cy="${y}" r="9"/><circle cx="${x}" cy="${y}" r="${k==='ctg'?2.6:4.2}" fill="var(--c)" stroke="var(--surface)" stroke-width="1.6"/>
+      <text class="n1" x="${x+dx}" y="${y+dy}" text-anchor="${anchor}">${P[2]}</text><text class="n2" x="${x+dx}" y="${y+dy+11}" text-anchor="${anchor}">${sub}</text></g>`};
+  const lbl=(x,y,t,a='middle')=>`<text class="rl" x="${x}" y="${y}" text-anchor="${a}">${t}</text>`;
+  const conts=`<text class="cont" x="${WX_(-50)}" y="${WY_(-6)}" text-anchor="middle">América del Sur</text>
+  <text class="cont" x="${WX_(-35)}" y="${WY_(30)}" text-anchor="middle">Océano Atlántico</text>
+  <text class="cont" x="${WX_(30)}" y="${WY_(60)}" text-anchor="middle">Europa</text>
+  <text class="cont" x="${WX_(80)}" y="${WY_(52)}" text-anchor="middle">Asia</text>
+  <text class="cont" x="${WX_(20)}" y="${WY_(12)}" text-anchor="middle">África</text>`;
+  const body=which==='ida'?`
+  ${arc('baq','bog',-10,'tr',1.8,0)}${arc('bog','ctg',6,'ink',2.6,.1)}${arc('ctg','ams',58,'ink',2.6,.15)}${arc('ams','cdg',4,'ink',2.6,.7)}${arc('cdg','pek',46,'ink',2.6,.85)}
+  ${lbl(WX_(-50),WY_(38),'KL745 · 12 h 40')}${lbl(270,62,'AF382 · 11 h 20')}
+  ${lab('baq','tr',-10,-6,'start','sale 2 nov · 09:20 · LA4161',true)}${lab('bog','ink',10,6,'start','sale 2 nov · 16:05')}${lab('ctg','ink',10,-8,'start','escala 1 h 20')}
+  ${lab('ams','ink',-8,-16,'end','llega 3 nov · 10:45')}${lab('cdg','ink',-9,14,'end','escala 9 h 40')}
+  ${lab('pek','bj',-8,-10,'end','llega 4 nov · 17:40')}`:`
+  ${arc('szx','pvg',-6,'sh',2.6,0)}${arc('pvg','ams',-34,'sh',2.6,.3)}${arc('ams','bog',-62,'sh',2.6,.9)}${arc('bog','baq',10,'tr',1.8,1.5)}
+  ${lbl(232,152,'KL896 · 14 h 20')}${lbl(WX_(-30),WY_(20),'KL749 · 11 h 10')}
+  ${lab('szx','sz',-10,22,'end','sale 15 nov · 19:10')}${lab('pvg','sh',-12,2,'end','llega 15 nov · 21:25')}
+  ${lab('ams','sh',-8,-16,'end','llega 16 nov · 18:25')}${lab('bog','sh',10,6,'start','llega 17 nov · 14:30')}${lab('baq','tr',-10,-6,'start','llega 17 nov · 20:00 · LA4146',true)}`;
+  return `<svg viewBox="0 0 400 282" role="img" aria-label="${which==='ida'?'Ida: Barranquilla, Bogotá, escala en Cartagena, Ámsterdam, París y Beijing':'Vuelta: Shenzhen, Shanghái, Ámsterdam, Bogotá y Barranquilla'}">${grid}${conts}${body}</svg>`;
+}
+function dur(a,b){const m=Math.round((b-a)/6e4);return `${Math.floor(m/60)} h ${m%60} min`}
+function journeyHTML(which){
+  const U=(d,t,z)=>{const [y,m,dd]=d.split('-').map(Number),[hh,mm]=t.split(':').map(Number);return Date.UTC(y,m-1,dd,hh,mm)-z*36e5};
+  const st=(day,t,w,cls='')=>`<li class="${cls}" data-day="${day}"><b>${t}</b><small>${w}</small></li>`;
+  if(which==='ida')return `<div class="journey one"><div class="jcol" style="--c:var(--ink)"><h4>Ida a China</h4><p class="tot">Del lunes 2 al miércoles 4 de noviembre · ${dur(U('2026-11-02','09:20',-5),U('2026-11-04','17:40',8))} de Barranquilla a Beijing</p><ol>
+    ${st('02','Barranquilla → Bogotá','Lun 2 · 09:20 → 10:55 · LATAM LA4161')}
+    ${st('02','Espera en Bogotá','2 h 10 min hasta que abre el counter de KLM; la maleta se documenta otra vez','stay')}
+    ${st('02','Bogotá → Ámsterdam','Lun 2 · 16:05 (Colombia) → Mar 3 · 10:45 (Ámsterdam) · KL745, escala en Cartagena')}
+    ${st('03','Ámsterdam → París','Mar 3 · 12:25 → 13:40 · KL1407')}
+    ${st('03','Escala en París','9 h 40 min · de la Terminal 2F a la 2E','stay')}
+    ${st('03','París → Beijing','Mar 3 · 23:20 (París) → Mié 4 · 17:40 (China) · AF382')}
+  </ol></div></div>`;
+  return `<div class="journey one"><div class="jcol" style="--c:var(--sh)"><h4>Vuelta a Colombia</h4><p class="tot">Del domingo 15 al martes 17 de noviembre · ${dur(U('2026-11-15','19:10',8),U('2026-11-17','20:00',-5))}, de Shenzhen a Barranquilla, con dos noches en ruta</p><ol>
+    ${st('15','Shenzhen → Shanghái','Dom 15 · 19:10 → 21:25 · MU5352 / KL8817')}
+    ${st('15','Noche en Shanghái','Hotel por confirmar','stay')}
+    ${st('16','Shanghái → Ámsterdam','Lun 16 · 11:05 (China) → 18:25 (Ámsterdam) · KL896')}
+    ${st('16','Noche en Ámsterdam','Hotel por confirmar','stay')}
+    ${st('17','Ámsterdam → Bogotá','Mar 17 · 09:20 (Ámsterdam) → 14:30 (Colombia) · KL749')}
+    ${st('17','Bogotá → Barranquilla','Mar 17 · 18:25 → 20:00 · LATAM LA4146')}
+  </ol></div></div>`;
+}
+const LEG_CHINA='<span style="--c:var(--sh)"><i></i>Tren G3</span><span style="--c:var(--hz)"><i class="d"></i>Bus</span><span style="--c:var(--sz)"><i class="d"></i>Vuelo interno</span><span style="--c:var(--tr)"><i class="d"></i>Vuelos internacionales</span><span>Toca una ciudad para abrir su primer día.</span>';
+const LEG_WORLD='<span>Esquema sin escala real. Toca una ciudad o un tramo para abrir ese día.</span>';
+let mapMode=Date.now()<UT0('2026-11-04','17:40',8)?'ida':Date.now()<UT0('2026-11-15','19:10',8)?'china':'vuelta';
+function renderMap(){
+  const w=mapMode!=='china';
+  $('#mapSvg').innerHTML=w?worldSVG(mapMode):mapSVG();
+  $('#mapLegend').innerHTML=w?LEG_WORLD:LEG_CHINA;
+  $('#journey').innerHTML=w?journeyHTML(mapMode):'';
+  document.querySelectorAll('.maptabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.map===mapMode));
+}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-map]');if(t){mapMode=t.dataset.map;renderMap()}});
+renderMap();
+
+document.addEventListener('keydown',e=>{const n=e.target.closest&&e.target.closest('.node');if(n&&(e.key==='Enter'||e.key===' ')){e.preventDefault();goDay(n.dataset.day,true)}});
 
 /* ---------- Cities ---------- */
 const SCALE=25,pct=v=>v/SCALE*100;
 function renderCities(){
 $('#cities').innerHTML=Object.entries(CITIES).map(([k,c])=>`
-<article class="card city c-${k}">
-  <div class="city-head"><h3>${c.name}<small>${c.han}</small></h3><span class="tag">${c.climate}</span></div>
+<article class="card city c-${k}" data-han="${c.han}">
+  <div class="city-head"><h3><span class="wx" aria-hidden="true">${WXI[k]}</span>${c.name}<small>${c.han}</small></h3><span class="tag">${c.climate}</span></div>
   <div class="meta-row"><span class="tag">📅 ${c.dates}</span><span class="tag">🌙 ${c.nights} ${c.nights==='1'?'noche':(/^\d+$/.test(c.nights)?'noches':'')}</span><span class="tag">🏨 ${c.hotel}</span></div>
   <div class="temp"><span class="temp-val">${c.min}–${c.max} °C ${c.note?`<small>(${c.note})</small>`:''}</span>
     <div class="bar"><i style="left:${pct(c.min)}%;width:${pct(c.max)-pct(c.min)}%"></i></div>
     <div class="bar-l"><span>0 °C</span><span>25 °C</span></div></div>
-  <div class="wear"><p>${c.wear}</p><div class="chips">${c.extras.map(x=>`<span class="chip">${x}</span>`).join('')}</div>${styleHTML(CITYSTYLE[k])}</div>
+  <div class="wear"><p class="acc">Accesorios útiles</p><div class="chips">${c.extras.map(x=>`<span class="chip">${x}</span>`).join('')}</div>${styleHTML(CITYSTYLE[k])}</div>
   <ul class="places">${c.places.map(p=>`<li>${p}</li>`).join('')}</ul>
   ${c.also?`<p class="also"><b>Si hay tiempo libre:</b> ${c.also}</p>`:''}
 </article>`).join('');
 }
 renderCities();
-$('#sumTable').innerHTML=Object.entries(CITIES).map(([k,c])=>`<tr class="c-${k}"><td><b>${c.name}</b></td><td>${c.dates}</td><td>${c.nights}</td><td>${c.min}–${c.max} °C${c.note?` (${c.note})`:''} · ${c.climate.toLowerCase()}</td><td>${c.hotel}</td><td>${c.key}</td></tr>`).join('');
 
 /* ---------- Live forecast (Open-Meteo, 16 días) ---------- */
 const fc={};
@@ -761,14 +1075,126 @@ function forecast(k){
 }
 const WCODE={0:'Despejado',1:'Mayormente despejado',2:'Parcialmente nublado',3:'Nublado',45:'Niebla',48:'Niebla',51:'Llovizna ligera',53:'Llovizna',55:'Llovizna intensa',61:'Lluvia ligera',63:'Lluvia',65:'Lluvia fuerte',71:'Nieve ligera',73:'Nieve',75:'Nieve intensa',80:'Chubascos ligeros',81:'Chubascos',82:'Chubascos fuertes',95:'Tormenta'};
 
+/* ---------- Visitas y comida sugeridas ---------- */
+const MAPQ=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const EXPLORE={
+ bj:{name:'Beijing',han:'北京',c:'bj',
+  free:'Jue 5 desde las 20:30 · vie 6 desde las 17:30 · sáb 7 desde las 17:30 · dom 8 de 15:00 a 18:00.',
+  see:[['🏛️','Templo del Cielo','天坛','Conjunto Ming donde el emperador rezaba por las cosechas. Temprano se ve a la gente haciendo taichí en el parque.','Temple of Heaven Beijing'],
+       ['🏮','Hutongs y lago Houhai','后海','Callejones tradicionales y bares junto al lago; bonito al anochecer. Se recorre a pie o en bicitaxi.','Houhai Beijing'],
+       ['🛍️','Wangfujing','王府井','Calle peatonal comercial en el centro, a unos 20 minutos en taxi del Hilton. Buena para las compras del domingo.','Wangfujing Street Beijing'],
+       ['🎨','Distrito de arte 798','798艺术区','Fábricas convertidas en galerías y cafés.','798 Art District Beijing'],
+       ['🌉','Palacio de Verano','颐和园','Jardines imperiales junto al lago Kunming. Pide media jornada.','Summer Palace Beijing']],
+  eat:[['🦆','Pato laqueado','北京烤鸭','El plato de Beijing: piel crujiente en crepas finas con salsa dulce y cebollín.'],
+       ['🥟','Jiaozi','饺子','Empanaditas cocidas al vapor o hervidas, rellenas de cerdo y verduras.'],
+       ['🍜','Zhajiangmian','炸酱面','Fideos gruesos con salsa de soya fermentada y cerdo.'],
+       ['🍢','Tanghulu','糖葫芦','Frutas cubiertas de caramelo en palito; el dulce callejero típico del invierno.']],
+  tip:'Hace frío de noche: lleva guantes si sales después de las 18:00.'},
+ sh:{name:'Shanghái',han:'上海',c:'sh',
+  free:'Lun 9 desde las 17:30 · mar 10 desde las 19:00 · mié 11 desde las 18:00.',
+  see:[['🌃','The Bund de noche','外滩','El malecón con la vista iluminada de Pudong. Está en la agenda de día; de noche se ve distinto.','The Bund Shanghai'],
+       ['⛩️','Jardín Yuyuan y su bazar','豫园','Jardín clásico de la dinastía Ming rodeado de tiendas y puestos de comida.','Yu Garden Shanghai'],
+       ['🍸','Xintiandi','新天地','Casas shikumen restauradas con restaurantes; cómodo para cenar en grupo.','Xintiandi Shanghai'],
+       ['🌳','Antigua Concesión Francesa','法租界','Calles arboladas como Wukang Road, ideales para caminar.','Wukang Road Shanghai'],
+       ['🛳️','Crucero por el río Huangpu','黄浦江','Paseo nocturno de unos 50 minutos entre el Bund y Pudong.','Huangpu River cruise Shanghai']],
+  eat:[['🥟','Xiaolongbao','小笼包','Bollitos al vapor con caldo dentro: muerde un poco y sorbe el caldo antes de comer.'],
+       ['🍳','Shengjianbao','生煎包','Bollos de cerdo dorados a la sartén, crujientes por debajo.'],
+       ['🍖','Hongshao rou','红烧肉','Cerdo estofado en salsa de soya y azúcar, dulce y suave.'],
+       ['🦀','Cangrejo peludo','大闸蟹','Noviembre es su temporada en Shanghái; es una delicia local, aunque costosa.']],
+  tip:'Nanjing Road es peatonal y llena de gente de noche: cuida el celular y la billetera.'},
+ hz:{name:'Hangzhou',han:'杭州',c:'hz',
+  free:'El día es de visitas con el grupo; casi no hay tiempo libre.',
+  see:[['🌊','Lago del Oeste','西湖','Patrimonio UNESCO y símbolo de la ciudad. Si el bus pasa cerca, pide al coordinador una parada breve.','West Lake Hangzhou'],
+       ['🍵','Plantaciones de té Longjing','龙井村','Colinas de té verde al suroeste del lago.','Longjing Village Hangzhou']],
+  eat:[['🍖','Cerdo Dongpo','东坡肉','Panceta cocida lentamente en vino de arroz; el plato más famoso de Hangzhou.'],
+       ['🐟','Pescado al vinagre del Lago del Oeste','西湖醋鱼','Pescado con salsa agridulce de vinagre.'],
+       ['🦐','Camarones con té Longjing','龙井虾仁','Camarones salteados con hojas de té verde.'],
+       ['🍵','Té Longjing','龙井茶','El té verde más famoso de China; buen recuerdo para llevar.']],
+  tip:'Si quieres comprar té Longjing, pregunta al coordinador por una tienda confiable.'},
+ sz:{name:'Shenzhen',han:'深圳',c:'sz',
+  free:'Jue 12 desde las 18:30 · vie 13 de 14:00 a 17:30 (por confirmar) · sáb 14 desde las 14:30 · dom 15 hasta las 15:00.',
+  see:[['🏙️','Mirador Free Sky del Ping An','平安金融中心','Mirador en lo alto de uno de los rascacielos más altos del mundo, en Futian.','Ping An Finance Center Free Sky Shenzhen'],
+       ['🏭','OCT Loft','华侨城创意园','Fábricas convertidas en galerías, librerías y cafés.','OCT Loft Shenzhen'],
+       ['🖼️','Aldea de pintores Dafen','大芬油画村','Miles de talleres de pintura al óleo; buen lugar para comprar recuerdos.','Dafen Oil Painting Village'],
+       ['🌅','Parque de la Bahía de Shenzhen','深圳湾公园','Malecón para caminar al atardecer, con vista hacia Hong Kong.','Shenzhen Bay Park'],
+       ['⚓','Sea World, Shekou','蛇口海上世界','Zona de restaurantes y bares junto a un antiguo barco crucero.','Sea World Shekou Shenzhen']],
+  eat:[['🥢','Dim sum (yum cha)','早茶','Desayuno-almuerzo cantonés de bocados al vapor con té. Ideal el sábado.'],
+       ['🍗','Ganso asado','烧鹅','Asado cantonés de piel brillante y crujiente.'],
+       ['🍲','Hot pot de res Chaoshan','潮汕牛肉火锅','Caldo claro donde cocinas cortes de res muy frescos.'],
+       ['🥭','Postres de mango','杨枝甘露','Crema fría de mango, pomelo y sagú; perfecta para el calor.']],
+  tip:'Huaqiangbei está en la agenda; los productos sin marca no tienen garantía.'},
+ par:{name:'París · escala',han:'🇫🇷',c:'tr',
+  free:'Mar 3 de 13:40 a 23:20 (9 h 40 min). Hay que volver a la Terminal 2E a más tardar a las 20:20.',
+  see:[['🚆','Tren RER B al centro','','Conecta el aeropuerto con el centro en unos 35–50 minutos. Calcula el regreso con margen.','RER B Charles de Gaulle'],
+       ['🗼','Torre Eiffel y Trocadéro','','La mejor vista de la torre es desde la explanada del Trocadéro.','Trocadéro Paris'],
+       ['⛪','Notre-Dame y la Île de la Cité','','Paseo a pie por el corazón histórico junto al Sena.','Notre-Dame de Paris']],
+  eat:[['🥐','Croissant y café en un bistró',''],['🥪','Croque-monsieur','','Sándwich gratinado de jamón y queso.'],['🍫','Macarons','','Para llevar de recuerdo.']],
+  tip:'Salir del aeropuerto es opcional. Si estás cansado, la Terminal 2E tiene zonas de descanso.'},
+ ams:{name:'Ámsterdam · noche',han:'🇳🇱',c:'tr',
+  free:'Lun 16 desde las 18:25 hasta el vuelo del mar 17 a las 09:20. El hotel está por confirmar.',
+  see:[['🚆','Tren a Ámsterdam Centraal','','Unos 15–20 minutos desde Schiphol.','Amsterdam Centraal'],
+       ['🛶','Canales y plaza Dam','','Paseo nocturno por el centro histórico.','Dam Square Amsterdam']],
+  eat:[['🧇','Stroopwafel','','Galleta de caramelo; la mejor, recién hecha.'],['🧆','Bitterballen','','Croquetas fritas de carne, típicas de bar.'],['🐟','Arenque crudo (haring)','','Un clásico holandés para valientes.']],
+  tip:'El vuelo a Bogotá sale temprano: en Schiphol a las 06:20.'}
+};
+const XORDER=['bj','sh','hz','sz','par','ams'];
+let xcur='bj';
+function renderX(){
+  $('#xtabs').innerHTML=XORDER.map(k=>{const x=EXPLORE[k];return `<button type="button" role="tab" data-x="${k}" aria-selected="${k===xcur}" style="--c:var(--${x.c})"><span class="h">${x.han}</span>${x.name}</button>`}).join('');
+  const x=EXPLORE[xcur],v=$('#xview');v.style.setProperty('--c',`var(--${x.c})`);
+  const li=(e,n,zh,d,q)=>`<li><span class="e" aria-hidden="true">${e}</span><div><b>${n}</b>${zh?`<span class="zh">${zh}</span>`:''}${d?`<p>${d}</p>`:''}${q?`<a href="${MAPQ(q)}" target="_blank" rel="noopener">Ver en el mapa</a>`:''}</div></li>`;
+  v.innerHTML=`<h3 style="margin:0;font-family:'Noto Serif SC',serif;font-size:1.4rem">${x.name}</h3>
+  <div class="free"><b>Tiempo libre según la agenda:</b> ${x.free}</div>
+  <div class="xcols"><div><h3>📍 Para visitar</h3><ul class="xl">${x.see.map(a=>li(...a)).join('')}</ul></div>
+  <div><h3>🍽️ Para comer</h3><ul class="xl">${x.eat.map(a=>li(a[0],a[1],a[2],a[3])).join('')}</ul></div></div>
+  <p class="xtips">💡 ${x.tip}</p>`;
+}
+renderX();
+document.addEventListener('click',e=>{const t=e.target.closest('[data-x]');if(t){xcur=t.dataset.x;renderX();if(t.dataset.go){$('#explorar').scrollIntoView({behavior:'smooth'})}}});
+
+/* Ciudad donde estás o a la que vas a llegar, según el itinerario */
+const UT=(d,t,z)=>{const [y,m,dd]=d.split('-').map(Number),[hh,mm]=t.split(':').map(Number);return Date.UTC(y,m-1,dd,hh,mm)-z*36e5};
+const DEST=[
+ [-Infinity,'Beijing','Asia/Shanghai',false],
+ [UT('2026-11-02','09:20',-5),'Bogotá','America/Bogota',false],
+ [UT('2026-11-02','16:05',-5),'Ámsterdam','Europe/Amsterdam',false],
+ [UT('2026-11-03','10:45',1),'Ámsterdam','Europe/Amsterdam',true],
+ [UT('2026-11-03','12:25',1),'París','Europe/Paris',false],
+ [UT('2026-11-03','13:40',1),'París','Europe/Paris',true],
+ [UT('2026-11-03','23:20',1),'Beijing','Asia/Shanghai',false],
+ [UT('2026-11-04','17:40',8),'Beijing','Asia/Shanghai',true],
+ [UT('2026-11-09','06:50',8),'Shanghái','Asia/Shanghai',false],
+ [UT('2026-11-09','11:30',8),'Shanghái','Asia/Shanghai',true],
+ [UT('2026-11-10','07:30',8),'Hangzhou','Asia/Shanghai',false],
+ [UT('2026-11-10','09:30',8),'Hangzhou','Asia/Shanghai',true],
+ [UT('2026-11-10','17:00',8),'Shanghái','Asia/Shanghai',false],
+ [UT('2026-11-10','19:00',8),'Shanghái','Asia/Shanghai',true],
+ [UT('2026-11-12','09:10',8),'Shenzhen','Asia/Shanghai',false],
+ [UT('2026-11-12','11:40',8),'Shenzhen','Asia/Shanghai',true],
+ [UT('2026-11-15','19:10',8),'Shanghái','Asia/Shanghai',false],
+ [UT('2026-11-15','21:25',8),'Shanghái','Asia/Shanghai',true],
+ [UT('2026-11-16','11:05',8),'Ámsterdam','Europe/Amsterdam',false],
+ [UT('2026-11-16','18:25',1),'Ámsterdam','Europe/Amsterdam',true],
+ [UT('2026-11-17','09:20',1),'Bogotá','America/Bogota',false],
+ [UT('2026-11-17','14:30',-5),'Bogotá','America/Bogota',true],
+ [UT('2026-11-17','18:25',-5),'Barranquilla','America/Bogota',false]];
+function destNow(ms){let r=null;for(const d of DEST)if(ms>=d[0])r=d;return r&&{city:r[1],tz:r[2],here:r[3]}}
+
 /* ---------- Agenda ---------- */
 const bogDate=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Bogota'}).format(new Date());
-const TODAY=bogDate();
+/* Fecha local: la de la ciudad donde estás (Colombia, Europa o China) */
+const locTz=()=>{const ms=Date.now();let tz='America/Bogota';for(const d of DEST)if(ms>=d[0]&&d[3])tz=d[2];return tz};
+const localDate=()=>new Intl.DateTimeFormat('en-CA',{timeZone:locTz()}).format(new Date());
+let TODAY=localDate();
 let cur=(DAYS.find(d=>d.date===TODAY)||DAYS[0]).id;
 const h=(location.hash||'').match(/^#dia-(\d\d)$/);if(h&&DAYS.some(d=>d.id===h[1]))cur=h[1];
 
-$('#daychips').innerHTML=DAYS.map(d=>`<button type="button" class="dchip c-${d.c}${d.date===TODAY?' today':''}" data-day="${d.id}" data-chip="1" aria-label="${d.long}"><small>${d.wd}</small><b>${+d.id}</b><i></i></button>`).join('');
+$('#daychips').innerHTML=DAYS.map(d=>`<button type="button" class="dchip c-${d.c}${d.date===TODAY?' today':''}" data-day="${d.id}" data-chip="1" aria-label="${d.long}"><small>${d.wd}<span class="w" aria-hidden="true">${WXI[d.c]}</span></small><b>${+d.id}</b><i></i></button>`).join('');
 
+const ICO={flight:'✈️',arrive:'🛬',train:'🚄',bus:'🚌',transfer:'🚐',meal:'🍽️',talk:'🎤',visit:'🏢',culture:'🏯',meet:'🤝',hotel:'🏨',free:'☕',info:'⏰',home:'🏠'};
+const GEAR=[[/abrigo|parka/i,'🧥','Abrigo'],[/bufanda|pashmina/i,'🧣','Bufanda'],[/guantes/i,'🧤','Guantes'],[/gorro/i,'🧢','Gorro'],[/térmic/i,'🌡️','Térmicas'],[/suéter|cárdigan|fleece/i,'🧶','Suéter'],[/traje|corbata/i,'👔','Traje'],[/blazer/i,'🧥','Blazer'],[/vestido|falda/i,'👗','Vestido o falda'],[/polo|manga corta|camiseta/i,'👕','Polo o camiseta'],[/tenis|trekking/i,'👟','Tenis'],[/botín|botines|zapato/i,'👞','Zapato cerrado'],[/paraguas|impermeable|lluvia/i,'☂️','Paraguas'],[/gafas/i,'🕶️','Gafas de sol'],[/protector solar/i,'🧴','Protector solar'],[/sombrero|gorra/i,'👒','Gorra o sombrero'],[/compresión/i,'🧦','Medias de compresión']];
+function gearHTML(t){const seen=new Set();const out=GEAR.filter(([re,i,l])=>re.test(t)&&!seen.has(l)&&seen.add(l));
+  return out.length?`<div class="gear" aria-label="Qué llevar">${out.map(([,i,l])=>`<span><b aria-hidden="true">${i}</b>${l}</span>`).join('')}</div>`:''}
 function renderDay(){
   const i=DAYS.findIndex(d=>d.id===cur),d=DAYS[i],prev=DAYS[i-1],next=DAYS[i+1];
   const city=CITIES[d.c];
@@ -783,18 +1209,19 @@ function renderDay(){
     <div class="fact${d.sleepWarn?' warn':''}"><span>Esta noche</span>${d.sleep}</div>
     <div class="fact"><span>Horario</span>${d.tz}</div>
   </div>
-  <div class="outfit"><div class="ico">👔</div><div style="flex:1"><span class="badge ${bc}">${bl}</span><p>${d.dress[1]}</p>${styleHTML(STYLE[d.id])}</div></div>
+  <div class="outfit"><div class="ico">👔</div><div style="flex:1"><div class="o-h"><span class="badge ${bc}">${bl}</span><small>Vestuario sugerido</small></div>${gearHTML(d.dress[1])}${styleHTML(STYLE[d.id])}</div></div>
   ${d.alerts.map(a=>`<div class="alert"><div>${a}</div></div>`).join('')}
+  ${(()=>{const k=d.id==='03'?'par':d.id==='16'?'ams':(d.id==='10'?'hz':d.c);return EXPLORE&&EXPLORE[k]&&d.items.some(it=>it.k==='free')?`<div class="dayx"><button type="button" class="btn" data-x="${k}" data-go="1">🍜 Ideas para visitar y comer en ${EXPLORE[k].name.split(' ·')[0]}</button></div>`:''})()}
   <ol class="tl">${d.items.map(it=>{
     const cls=MOVE.has(it.k)?'move':(it.k==='free'?'free':'');
     const mode=MODE[it.k]?`<span class="mode">${MODE[it.k]}</span><br>`:'';
     const time=it.t?`${it.t}${it.e?`<small>a ${it.e}</small>`:''}`:(it.e?`<small>hasta ${it.e}</small>`:'<small>·</small>');
-    return `<li class="${cls}"><time>${time}</time><div>${mode}<h4>${it.title}</h4>${it.sub?`<p class="s">${it.sub}</p>`:''}${it.meta?`<ul class="pills">${it.meta.map(m=>`<li>${m}</li>`).join('')}</ul>`:''}${it.note?`<p class="n">${it.note}</p>`:''}${it.f?winHTML(it.f):''}</div></li>`;
+    return `<li class="${cls}"><time>${time}</time><div class="tl-ico" aria-hidden="true">${ICO[it.k]||'•'}</div><div>${mode}<h4>${it.title}</h4>${it.sub?`<p class="s">${it.sub}</p>`:''}${it.meta?`<ul class="pills">${it.meta.map(m=>`<li>${m}</li>`).join('')}</ul>`:''}${it.note?`<p class="n">${it.note}</p>`:''}${it.f?winHTML(it.f):''}</div></li>`;
   }).join('')}</ol>
   <div class="pager"><button type="button" data-day="${prev?prev.id:''}" ${prev?'':'disabled'}><small>Día anterior</small>${prev?prev.long.replace(' de noviembre',''):'—'}</button><button type="button" data-day="${next?next.id:''}" ${next?'':'disabled'}><small>Día siguiente</small>${next?next.long.replace(' de noviembre',''):'—'}</button></div>`;
   document.querySelectorAll('.dchip').forEach(b=>b.setAttribute('aria-current',b.dataset.day===cur?'true':'false'));
   const chip=document.querySelector(`.dchip[data-day="${cur}"]`);
-  if(chip)chip.scrollIntoView({block:'nearest',inline:'center'});
+  if(chip){const dc=$('#daychips');dc.scrollLeft=chip.offsetLeft-dc.offsetLeft-dc.clientWidth/2+chip.clientWidth/2}
   if(city){
     const live=$('#live');live.textContent='Buscando pronóstico…';
     forecast(d.c).then(data=>{
@@ -813,9 +1240,100 @@ function goDay(id,scroll){
   try{history.replaceState(null,'','#dia-'+id)}catch(e){}
   if(scroll)$('#agenda').scrollIntoView({behavior:'smooth'});
 }
+/* Próximo evento: hora local de cada tramo (Colombia −5, Europa +1, China +8) */
+function tzOf(d,it){if('z' in it)return it.z;if(d.id==='02')return -5;if(d.id==='03')return 1;if(d.id==='16')return it.t>='18:00'?1:8;if(d.id==='17')return it.k==='arrive'?-5:1;return 8}
+function placeOf(d,it){const z=tzOf(d,it);return z===-5?'hora de Colombia':z===1?'hora de Europa':'hora de China'}
+const EVENTS=DAYS.flatMap(d=>d.items.filter(it=>it.t).map(it=>{const [y,m,dd]=d.date.split('-').map(Number),[hh,mm]=it.t.split(':').map(Number);
+  return {d,it,at:Date.UTC(y,m-1,dd,hh,mm)-tzOf(d,it)*36e5}}));
+function rel(ms){const m=Math.round(ms/6e4),dd=Math.floor(m/1440),h=Math.floor(m%1440/60),mi=m%60;
+  return dd>0?`en ${dd} ${dd===1?'día':'días'}${h?` y ${h} h`:''}`:h>0?`en ${h} h ${mi} min`:`en ${mi} min`}
+function renderNext(){
+  const now=Date.now(),e=EVENTS.find(x=>x.at>now),box=$('#next');
+  if(!e){box.innerHTML=`<div class="pass-main"><small>Viaje terminado</small><h3>Bienvenidos a casa</h3></div><div class="pass-stub"><span class="han">家</span></div>`;return}
+  const c=CITIES[e.d.c];box.style.setProperty('--c',`var(--${e.d.c})`);
+  box.innerHTML=`<div class="pass-main"><small>Lo próximo · ${e.d.long}</small><div class="pt">${e.it.t}<span>${placeOf(e.d,e.it)}</span></div><h3>${ICO[e.it.k]||''} ${e.it.title}</h3>${e.it.sub?`<small>${e.it.sub}</small>`:''}<span class="rel">${rel(e.at-now)}</span></div>
+  <div class="pass-stub"><span class="han">${c?c.han:'✈'}</span><small>${c?c.name:'En tránsito'}</small><button type="button" data-day="${e.d.id}">Ver el día</button></div>`;
+}
+renderNext();setInterval(renderNext,60000);
+/* Deslizar para cambiar de día */
+(()=>{let x0=null,y0=null;const v=$('#dayview');
+  v.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+  v.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
+    if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){const i=DAYS.findIndex(d=>d.id===cur),n=DAYS[i+(dx<0?1:-1)];if(n)goDay(n.id,false)}});
+  document.addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('input,textarea'))return;const r=$('#agenda').getBoundingClientRect();if(r.top>innerHeight||r.bottom<0)return;
+    const i=DAYS.findIndex(d=>d.id===cur);if(e.key==='ArrowRight'&&DAYS[i+1])goDay(DAYS[i+1].id,false);if(e.key==='ArrowLeft'&&DAYS[i-1])goDay(DAYS[i-1].id,false)});
+})();
+/* Barra inferior: resalta la sección visible */
+(()=>{const links=[...document.querySelectorAll('.bnav a')];if(!('IntersectionObserver' in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.dataset.sec===en.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(a=>{const t=document.getElementById(a.dataset.sec);if(t)io.observe(t)});})();
 function renderWho(){document.querySelectorAll('#whoCity,#whoDay').forEach(e=>e.innerHTML=whoToggle())}
 renderWho();
 renderDay();
+
+
+
+/* ---------- Check-in por vuelo ---------- */
+const YT=q=>'https://www.youtube.com/results?search_query='+encodeURIComponent(q);
+const CHECKIN=[
+ {c:'tr',air:'LATAM',flights:'LA4161 · Barranquilla → Bogotá',date:'Lun 2 nov · 09:20',
+  when:'<b>Automático desde el sáb 31 oct, 09:20</b> (48 h antes). Si falta algún dato, hazlo tú en la app hasta 2 h antes.',
+  where:[['En línea','App LATAM, latam.com o el asistente de WhatsApp: ahí descargas el pase'],['Maleta','Tótem de autoatención y counter LATAM en Barranquilla'],['Llevar','Cédula o pasaporte']],
+  links:[['Ayuda de check-in LATAM','https://www.latamairlines.com/co/es/centro-ayuda/preguntas/check-in/automatico/disponible-pasajeros','pri']],day:'02'},
+ {c:'ink',air:'KLM / Air France',flights:'KL745 + KL1407 + AF382 · Bogotá → Ámsterdam → París → Beijing',date:'Lun 2 nov · 16:05',
+  when:'<b>Desde el dom 1 nov, 10:05 (hora de Colombia)</b>, 30 h antes. Un solo check-in cubre los tres vuelos de la ida.',
+  where:[['En línea','App KLM o klm.com, con código de reserva y apellido'],['Maleta','Counter KLM, Terminal 1 de El Dorado, de 13:05 a 15:05. Va documentada hasta Beijing'],['Llevar','Pasaporte con visa china']],
+  links:[['Ir a klm.com','https://www.klm.com/','pri'],['Horarios de check-in KLM','https://www.klm.com/information/airport/check-in-times']],day:'02'},
+ {c:'sz',air:'China Eastern',flights:'MU5331 · Shanghái → Shenzhen',date:'Jue 12 nov · 09:10',
+  when:'<b>Lo coordina asiaBconsulting</b>: es el vuelo interno incluido en la agenda del grupo.',
+  where:[['Dónde','Counter de China Eastern en el aeropuerto de Shanghái, con los coordinadores'],['Cierre','Mostrador 45 min antes (08:25)'],['Llevar','Pasaporte: es el documento del vuelo interno']],
+  links:[],day:'12'},
+ {c:'sh',air:'KLM (operado por China Eastern)',flights:'MU5352/KL8817 + KL896 + KL749 · Shenzhen → Shanghái → Ámsterdam → Bogotá',date:'Dom 15 nov · 19:10',
+  when:'<b>Desde el sáb 14 nov, 13:10 hora de China</b> (00:10 en Colombia), 30 h antes del primer vuelo. Si la app de KLM no deja hacerlo por ser un vuelo de China Eastern, se hace en el counter.',
+  where:[['Maleta','Counter de China Eastern, Terminal 3 de Shenzhen Bao’an; cierra 45 min antes (18:25)'],['Pregunta','Hasta dónde va la maleta: hay noches en Shanghái y Ámsterdam'],['Llevar','Pasaporte']],
+  links:[['Ir a klm.com','https://www.klm.com/','pri']],day:'15'},
+ {c:'tr',air:'LATAM',flights:'LA4146 · Bogotá → Barranquilla',date:'Mar 17 nov · 18:25',
+  when:'<b>Automático desde el dom 15 nov, 18:25</b> (48 h antes), hora de Colombia.',
+  where:[['Maleta','Counter LATAM en El Dorado, después de migración y aduana del KL749'],['Llevar','Cédula o pasaporte']],
+  links:[['Ayuda de check-in LATAM','https://www.latamairlines.com/co/es/centro-ayuda/preguntas/check-in/automatico/disponible-pasajeros','pri']],day:'17'},
+ {c:'sh',air:'Tren de alta velocidad',flights:'G3 · Beijing → Shanghái',date:'Lun 9 nov · 06:50',
+  when:'<b>No hay check-in:</b> el pasaporte es el boleto.',
+  where:[['Dónde','Control de seguridad y torniquete de la estación, con el grupo'],['Llevar','Pasaporte a mano todo el trayecto']],links:[],day:'09'}
+];
+$('#cis').innerHTML=CHECKIN.map(x=>`<article class="card ci" style="--c:var(--${x.c})">
+  <div class="ci-h"><h3>${x.air}</h3><span>${x.date}</span></div>
+  <p style="margin:2px 0 0;font-size:.88rem;font-weight:600">${x.flights}</p>
+  <div class="when">${x.when}</div>
+  <dl>${x.where.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+  <div class="btns">${x.links.map(([t,u,c])=>`<a class="btn ${c||''}" href="${u}" target="_blank" rel="noopener">${t}</a>`).join('')}<button type="button" class="btn" data-day="${x.day}">Ver en la agenda</button></div>
+</article>`).join('');
+
+/* ---------- Apps ---------- */
+const APPS=[
+ {i:'📅',n:'Planify',tag:'Obligatoria',why:'La agenda oficial de la misión, actualizada a diario por asiaBconsulting.',
+  steps:['Descárgala en Google Play o App Store.','Toca «Add a Program».','Escanea el código QR que entrega asiaBconsulting.'],
+  links:[['Descargar','https://download.planify.com','pri'],['Videos','vid:Planify app add a program tutorial']]},
+ {i:'💬',n:'WeChat',tag:'Obligatoria',why:'Comunicación con coordinadores y contactos en China; también sirve para pagar.',
+  steps:['Regístrate con tu número de celular colombiano.','Si pide verificación, un usuario de WeChat puede escanear tu código.','En «Yo → Servicios → Monedero» puedes agregar una tarjeta internacional.'],
+  links:[['Sitio oficial','https://www.wechat.com/','pri'],['Android','https://play.google.com/store/apps/details?id=com.tencent.mm'],['iPhone','https://apps.apple.com/app/wechat/id414478124'],['Videos','vid:cómo registrarse en WeChat y vincular tarjeta para viajar a China']]},
+ {i:'💳',n:'Alipay',tag:'Para pagar',why:'El medio de pago más usado en China; en muchos lugares no reciben tarjeta física.',
+  steps:['Regístrate con tu número internacional y el código por SMS.','Verifica tu identidad: escanea el pasaporte y haz el reconocimiento facial (puede tardar hasta 24 h).','En «Yo → Tarjetas bancarias» vincula tu Visa o Mastercard y confirma con tu banco.'],
+  links:[['Android','https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone','pri'],['iPhone','https://apps.apple.com/app/alipay/id333206289'],['Guía en español','https://www.wanderinchina.com/es/survival-guide/payment/alipay/'],['Videos','vid:cómo configurar Alipay para extranjeros viajar a China']]},
+ {i:'📶',n:'eSIM de datos',tag:'Recomendada',why:'Internet desde que aterrizas y sin VPN. Opciones de la presentación: Airalo, Holafly, Nomad y SimOptions.',
+  steps:['Compra un plan para China antes de viajar.','Instálala con el código QR estando en Colombia, con wifi.','Actívala al aterrizar en Beijing (datos en itinerancia encendidos).'],
+  links:[['Airalo','https://www.airalo.com/','pri'],['Holafly','https://esim.holafly.com/es/'],['Nomad','https://www.getnomad.app/'],['Videos','vid:cómo instalar eSIM para viajar a China sin VPN']]},
+ {i:'🛂',n:'Arrival Card de China',tag:'Trámite',why:'Tarjeta electrónica de llegada para migración. Es gratuita.',
+  steps:['Entra al sitio oficial de la NIA.','Llena tus datos y los del vuelo AF382.','Hazlo dentro de las 72 h antes de llegar; también se puede en el aeropuerto.'],
+  links:[['Sitio oficial NIA','https://s.nia.gov.cn/ArrivalCardFillingPC/entry-registation-home','pri'],['Videos','vid:cómo llenar China arrival card electrónica']]},
+ {i:'✈️',n:'Apps de las aerolíneas',tag:'Pases de abordar',why:'KLM para los vuelos internacionales y LATAM para Barranquilla ↔ Bogotá. Avisan cambios de puerta y retrasos.',
+  steps:['Instala KLM y LATAM Airlines.','Agrega tus reservas con el código y el apellido.','Activa las notificaciones.'],
+  links:[['KLM en Google Play','https://play.google.com/store/search?q=KLM%20Royal%20Dutch%20Airlines&c=apps','pri'],['LATAM en Google Play','https://play.google.com/store/search?q=LATAM%20Airlines&c=apps'],['Videos','vid:check-in KLM app tutorial español']]}
+];
+$('#appsList').innerHTML=APPS.map(a=>`<article class="card app"><div class="ai" aria-hidden="true">${a.i}</div><div>
+  <h3>${a.n}<span class="tag">${a.tag}</span></h3><p class="why">${a.why}</p>
+  <ol>${a.steps.map(x=>`<li>${x}</li>`).join('')}</ol>
+  <div class="btns">${a.links.map(([t,u,c])=>u.startsWith('vid:')?`<a class="btn vid" href="${YT(u.slice(4))}" target="_blank" rel="noopener">▶ ${t}</a>`:`<a class="btn ${c||''}" href="${u}" target="_blank" rel="noopener">${t}</a>`).join('')}</div>
+</div></article>`).join('');
 
 /* ---------- Legs ---------- */
 let g='',lh='';
@@ -884,15 +1402,25 @@ document.addEventListener('change',e=>{
   done[c.dataset.id]=c.checked;trySet('china26-check',JSON.stringify(done));prog();
 });
 
+
 /* ---------- Clocks & countdown ---------- */
 function tick(){
-  const f=tz=>new Intl.DateTimeFormat('es-CO',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());
-  $('#clkCO').textContent=f('America/Bogota');$('#clkCN').textContent=f('Asia/Shanghai');
-  const t=Date.parse(bogDate()+'T00:00:00Z'),s=Date.parse('2026-11-02T00:00:00Z'),en=Date.parse('2026-11-17T00:00:00Z');
+  const now=new Date(),f=tz=>new Intl.DateTimeFormat('es-CO',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false}).format(now);
+  const off=tz=>{const p=new Intl.DateTimeFormat('en-US',{timeZone:tz,timeZoneName:'shortOffset'}).formatToParts(now).find(x=>x.type==='timeZoneName').value.match(/GMT([+-]\d+)?/);return p&&p[1]?+p[1]:0};
+  const rel=tz=>{const d=off(tz)-off('America/Bogota');return (d>=0?'+':'')+d+' h'};
+  $('#clkCO').textContent=f('America/Bogota');$('#clkEU').textContent=f('Europe/Amsterdam');$('#clkCN').textContent=f('Asia/Shanghai');
+  $('#offEU').textContent=rel('Europe/Amsterdam');$('#offCN').textContent=rel('Asia/Shanghai');
+  const g=destNow(now.getTime()),pre=now.getTime()<DEST[1][0];
+  const box={'America/Bogota':'#ckCO','Europe/Amsterdam':'#ckEU','Europe/Paris':'#ckEU','Asia/Shanghai':'#ckCN'};
+  document.querySelectorAll('.clockbar .ck').forEach(c=>{c.classList.remove('on');const d=c.querySelector('.ck-d');if(d)d.textContent=''});
+  if(g&&box[g.tz]){const c=$(box[g.tz]);c.classList.add('on');c.querySelector('.ck-d').textContent=(pre?'🎯 destino: ':g.here?'📍 ':'🛬 llegas a ')+g.city;}
+  const ld=localDate();
+  if(ld!==TODAY){TODAY=ld;document.querySelectorAll('.dchip').forEach(c=>{const d=DAYS.find(x=>x.id===c.dataset.day);c.classList.toggle('today',d&&d.date===TODAY)});renderNext&&renderNext()}
+  const t=Date.parse(ld+'T00:00:00Z'),s=Date.parse('2026-11-02T00:00:00Z'),en=Date.parse('2026-11-17T00:00:00Z');
   let a,b;
-  if(t<s){const n=Math.round((s-t)/864e5);a=n===1?'1 día':n+' días';b='para salir'}
-  else if(t<=en){a='Día '+(Math.round((t-s)/864e5)+1);b='de 16 del viaje'}
-  else{a='De vuelta';b='viaje terminado'}
+  if(t<s){const n=Math.round((s-t)/864e5);a=n===1?'Falta 1 día':'Faltan '+n+' días';b='para salir'}
+  else if(t<=en){a='Día '+(Math.round((t-s)/864e5)+1);b='de 16'}
+  else{a='De vuelta';b=''}
   $('#stA').textContent=a;$('#stB').textContent=b;
 }
 tick();setInterval(tick,30000);
